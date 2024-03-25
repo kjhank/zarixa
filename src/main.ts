@@ -8,6 +8,7 @@ import { initAss } from './scripts/components/ass';
 import { initHeaderScrolling } from './header';
 import { initScrollers } from './scrollers';
 import { initTriggers } from './triggers';
+import { initDialog } from './dialog';
 
 customElements.define('product-logo', LogoComponent);
 customElements.define('ass-head', HeadComponent);
@@ -19,3 +20,4 @@ initAss();
 initHeaderScrolling();
 initScrollers();
 initTriggers();
+initDialog();

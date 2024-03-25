@@ -265,6 +265,23 @@
       </div>
     </section>
   </aside>
+  <dialog class="entry-dialog">
+    <product-logo></product-logo>
+    <form method="dialog">
+      <h2>Jestem lekarzem:</h2>
+      <label for="practice-license">
+        <span class="label-text">PWZ:</span>
+        <input type="text" id="practice-license" name="practice-license" minlength="7" maxlength="7" pattern="^\d{0,7}$" required />
+      </label>
+      <label for="confirmation">
+        <input type="checkbox" name="confirmation" id="confirmation" required />
+        <p class="label-text">
+          Oświadczam, że posiadam prawo wykonywania zawodu lekarza i uzyskałem wpis do rejestru prowadzonego przez właściwą okręgową radę lekarską, oraz nie zostałem zawieszony w prawie wykonywania zawodu lekarza ani ograniczony w wykonywaniu określonych czynności medycznych. Jestem osobą uprawnioną do otrzymywania specjalistycznych informacji medycznych zgodnie z ustawą Prawo farmaceutyczne. Chcę zapoznać się z treścią serwisu.
+        </p>
+      </label>
+      <button>Wchodzę</button>
+    </form>
+  </dialog>
   <script type="module" src="/src/main.ts"></script>
   <script src="https://zarixa-ai-widget-b60492fa0793.herokuapp.com/utrenica-chat-widget.js"></script>
 </body>

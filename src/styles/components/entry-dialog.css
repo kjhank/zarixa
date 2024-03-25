@@ -1,0 +1,99 @@
+.entry-dialog {
+  inline-size: min(80vw, 960px);
+  margin-block-start: min(6.875vw, 132px);
+  margin-inline: auto;
+  padding: min(40px, 2.08vw);
+
+  font-size: var(--fs-29);
+  color: inherit;
+
+  color-scheme: light;
+  background-color: var(--clr-13);
+  border-color: currentcolor;
+
+  &::backdrop {
+    background-color: var(--clr-bg);
+  }
+
+  svg {
+    margin-inline: auto;
+  }
+
+  h2 {
+    margin-block: min(40px, 2.08vw);
+    font-size: var(--fs-49);
+    text-align: center;
+  }
+
+  label {
+    display: flex;
+    inline-size: fit-content;
+
+    & + label {
+      margin-block-start: min(32px, 1.66vw);
+    }
+
+    &:has(input[type="checkbox"]) {
+      gap: min(16px, 0.83vw);
+      align-items: baseline;
+
+      input {
+        flex-shrink: 0;
+        aspect-ratio: 1;
+        inline-size: 0.8em;
+        accent-color: var(--clr-accent);
+
+        &:focus {
+          outline: 1px solid var(--clr-accent);
+          outline-offset: min(4px, 0.21vw);
+        }
+      }
+    }
+
+    &:has(input[type="text"]) {
+      margin-inline: auto;
+      outline: 1px solid transparent;
+
+      &:focus-within {
+        outline-color: var(--clr-accent);
+        outline-offset: min(4px, 0.21vw);
+      }
+
+      /* stylelint-disable-next-line no-descending-specificity */
+      input {
+        padding: min(4px, 0.21vw);
+        border: 1px solid currentcolor;
+        border-inline-start: none;
+
+        &:focus {
+          border-color: transparent;
+          outline: none;
+        }
+      }
+
+      .label-text {
+        padding: min(8px, 0.42vw);
+        color: var(--clr-text-alt);
+        background-color: var(--clr-accent);
+      }
+    }
+  }
+
+  button {
+    display: block;
+
+    inline-size: fit-content;
+    margin-inline: auto;
+    padding: min(8px, 0.42vw) min(16px, 0.83vw);
+
+    color: var(--clr-text-alt);
+
+    background-color: var(--clr-accent);
+    border: unset;
+
+    &:focus {
+      outline: 1px solid var(--clr-accent);
+      outline-offset: min(4px, 0.21vw);
+    }
+  }
+}

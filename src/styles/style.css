@@ -9,6 +9,7 @@
 @import url('./components/tabs.css');
 @import url('./components/ass.css');
 @import url('./components/page-footer.css');
+@import url('./components/entry-dialog.css');
 
 :root {
   font-family: var(--f-fam-1);
