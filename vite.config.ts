@@ -10,7 +10,9 @@ export default defineConfig({
     postcss: {
       plugins: [
         postcssLogical({
+          // @ts-expect-error: looks like bugged types
           blockDirection: 'top-to-bottom',
+          // @ts-expect-error: looks like bugged types
           inlineDirection: 'left-to-right',
         }),
         postcssNesting({

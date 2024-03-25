@@ -54,6 +54,7 @@
     inset-block-start: min(10vw, 192px);
     background-color: transparent;
 
+    /* stylelint-disable-next-line no-descending-specificity */
     .ass-text {
       display: none;
     }
