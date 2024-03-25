@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/naming-convention */
 type SetupTabs = (tabslist: Element, index: number) => void;
 
 const navKeys = ['ArrowRight', 'ArrowLeft'];
@@ -18,13 +20,8 @@ export const initTabs = () => {
     const handleTabChange = ({ target }: Event) => {
       if (!(target instanceof Element)) return;
 
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const [_, tabId] = target.id.split('tab-');
       const panelIndex = Number(tabId) - 1;
-
-      // tabs.forEach((tab) => tab.setAttribute('aria-selected', 'false'));
-
-      // panels.forEach((panel) => panel.classList.remove('tab-panel-active'));
 
       resetTabs();
 
