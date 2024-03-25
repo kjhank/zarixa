@@ -1,0 +1,84 @@
+.section {
+  &.hero {
+    position: relative;
+    background-image: url('../../assets/images/hero/zarixa_www_top_bg_tlo.jpg');
+    background-size: cover;
+    padding-block: min(11.3vw, 217px) min(3.02vw, 58px);
+  }
+
+  .hero-heading {
+    margin-block-end: min(0.9375vw, 18px);
+    font-size: var(--fs-49);
+    line-height: 1.04;
+  }
+
+  .hero-brow {
+    font-family: var(--f-fam-2);
+    font-size: var(--fs-116);
+    font-weight: var(--f-w-bold);
+    line-height: 1.052;
+    text-transform: uppercase;
+  }
+
+  .hero-copy {
+    font-size: var(--fs-18);
+  }
+
+  .hero-description {
+    inline-size: 42%;
+    margin-block: min(2.6vw, 50px) min(5.1vw, 98px);
+
+    > p ~ p {
+      margin-block-start: min(0.89vw, 17px);
+    }
+  }
+
+  .hero-more {
+    cursor: pointer;
+
+    translate: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: min(1.042vw, 20px);
+    align-items: center;
+
+    margin-inline: auto;
+    padding: 0;
+
+    font-size: var(--fs-22);
+    font-weight: var(--f-w-bold);
+    line-height: 1.23;
+    color: var(--clr-4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    background-color: transparent;
+    border: none;
+
+    svg {
+      inline-size: min(0.773vw, 14.83px);
+      transition: translate var(--t-fast)
+    }
+
+    &:hover {
+      svg {
+        translate: 0 100%;
+      }
+    }
+  }
+
+  .hero-image {
+    position: absolute;
+    inset: auto 0 0 auto;
+    grid-column: full;
+    inline-size: min(680px, 35.42vw);
+  }
+
+  .hero-decoration {
+    position: absolute;
+    inset: auto auto min(2.6vw, 50px) 0;
+    grid-column: full;
+    inline-size: min(37.136vw, 713px);
+  }
+}

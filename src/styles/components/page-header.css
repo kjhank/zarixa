@@ -1,0 +1,96 @@
+.page-header {
+  position: fixed;
+  z-index: 1;
+  inset: 0 0 auto;
+
+  padding-block: min(1.354vw, 26px);
+
+  transition: background-color var(--t-default);
+
+  &.scrolled {
+    background-color: var(--clr-bg);
+  }
+
+  .page-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .home-link {
+      block-size: min(3.75vw, 72px);
+
+      svg {
+        inline-size: auto;
+        block-size: 100%;
+      }
+    }
+
+    .navigation-list {
+      display: flex;
+      align-items: center;
+
+      padding: 0;
+
+      font-size: var(--fs-22);
+      font-weight: var(--f-w-bold);
+      color: var(--clr-text-alt);
+      list-style: none;
+
+      .nav-button {
+        cursor: pointer;
+
+        position: relative;
+
+        aspect-ratio: 3.585;
+        block-size: min(3.385vw, 65px);
+
+        background-color: transparent;
+        background-repeat: no-repeat;
+        background-size: 0;
+        border: none;
+
+        &::after {
+          content: '';
+
+          position: absolute;
+          z-index: -1;
+          inset: 0;
+
+          background-image: inherit;
+          background-size: contain;
+
+          transition: scale var(--t-fast);
+        }
+
+        &:hover {
+          z-index: 1;
+
+          &::after {
+            scale: 1.2;
+          }
+        }
+
+        &.indications {
+          background-image: url('/src/assets/images/buttons/menu-button-1.png');
+        }
+
+        &.doses {
+          background-image: url('/src/assets/images/buttons/menu-button-2.png');
+        }
+
+        &.knowledge-base {
+          background-image: url('/src/assets/images/buttons/menu-button-3.png');
+        }
+
+        &.contact {
+          background-image: url('/src/assets/images/buttons/menu-button-4.png');
+        }
+
+        &.assistant {
+          color: var(--clr-4);
+          background-image: url('/src/assets/images/buttons/menu-button-5.png');
+        }
+      }
+    }
+  }
+}

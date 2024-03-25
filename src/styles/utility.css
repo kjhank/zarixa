@@ -1,0 +1,14 @@
+.accent {
+  color: var(--clr-accent)
+}
+
+button.text {
+  cursor: pointer;
+
+  padding: 0;
+
+  color: inherit;
+
+  background-color: transparent;
+  border: none;
+}

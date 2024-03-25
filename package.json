@@ -1,0 +1,33 @@
+{
+  "name": "project_name",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@csstools/postcss-relative-color-syntax": "^2.0.12",
+    "@typescript-eslint/eslint-plugin": ">=7.0.2",
+    "@typescript-eslint/parser": ">=7.0.2",
+    "eslint": ">=8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "postcss": "^8.4.38",
+    "postcss-logical": "^7.0.1",
+    "postcss-nesting": "^12.1.0",
+    "postcss-preset-env": "^9.5.2",
+    "stylelint": "^16.2.1",
+    "stylelint-config-clean-order": "^5.4.1",
+    "stylelint-config-standard": "^36.0.0",
+    "stylelint-order": "^6.0.4",
+    "stylelint-use-logical": "^2.1.2",
+    "typescript": "^5.4.2",
+    "vite": "^5.1.6"
+  },
+  "dependencies": {
+    "@darkobits/vite-plugin-favicons": "^0.3.2"
+  }
+}

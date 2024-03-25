@@ -1,0 +1,106 @@
+.section {
+  &.indications {
+    padding-block: min(1.61vw, 31px);
+  }
+
+  .indications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: min(1.46vw, 28px);
+
+    margin-block-start: min(0.625vw, 12px);
+
+    font-weight: var(--f-w-bold);
+    list-style-type: none;
+
+    > li {
+      display: flex;
+      gap: min(2.55vw, 49px);
+      align-items: center;
+
+      padding: 46px 12px 31px 43px;
+
+      background-color: var(--clr-bg);
+      box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--clr-shadow);
+
+      transition: box-shadow var(--t-fast);
+
+      &:nth-child(odd) {
+        --shadow-x: 0;
+      }
+
+      &:hover {
+        --shadow-blur: min(3.6vw, 69px);
+        --shadow-y: min(3.312vw, 63.6px);
+      }
+
+      > picture {
+        flex-shrink: 0;
+        aspect-ratio: 1;
+        inline-size: min(13.8vw, 265px);
+
+        > img {
+          inline-size: 100%;
+          block-size: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .name {
+        font-size: var(--fs-20);
+        line-height: 1;
+      }
+
+      .description {
+        font-size: var(--fs-15);
+        line-height: 1.13;
+        color: var(--clr-dose-copy, currentColor);
+      }
+    }
+
+    .doses {
+      display: flex;
+
+      margin-block-start: min(1.93vw, 37px);
+      padding: 0;
+
+      font-family: var(--f-fam-2);
+      font-size: var(--fs-10);
+      font-weight: var(--f-w-bold);
+      list-style: none;
+
+      li {
+        display: grid;
+        place-items: center;
+
+        aspect-ratio: 1.38;
+        block-size: 4.1em;
+
+        color: var(--clr-text-alt);
+
+        background-color: var(--clr-dose, currentColor);
+      }
+    }
+
+    .copy {
+      display: flex;
+      flex-direction: column;
+      gap: min(0.1vw, 2px);
+      justify-content: center;
+
+      &:has(.description + .name) {
+        .description {
+          font-size: var(--fs-13);
+
+          & + .name {
+            margin-block-start: min(0.83vw, 16px);
+          }
+        }
+
+        .doses {
+          margin-block-start: min(1vw, 19px);
+        }
+      }
+    }
+  }
+}

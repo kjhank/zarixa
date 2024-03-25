@@ -1,0 +1,23 @@
+.grid {
+  --full-width: min(8.91vw, 171px);
+  --content: min(10.67vw, 205px);
+  --narrow: min(60.833vw, 1168px);
+
+  display: grid;
+  grid-template-columns: [full-start] var(--full-width) [content-start] var(--content) [narrow-start] var(--narrow) [narrow-end] var(--content) [content-end] var(--full-width) [full-end];
+  inline-size: min(1920px, 100%);
+  margin-inline: auto;
+
+
+  & > :not(.narrow, .full-width) {
+    grid-column: content;
+  }
+
+  & > .narrow {
+    grid-column: narrow;
+  }
+
+  & > .full-width {
+    grid-column: full;
+  }
+}

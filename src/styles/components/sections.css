@@ -1,0 +1,16 @@
+@import url('./hero.css');
+@import url('./indications.css');
+@import url('./doses.css');
+@import url('./knowledge-base.css');
+@import url('./contact.css');
+
+.section {
+  > h2 {
+    font-size: var(--fs-30);
+    font-weight: var(--f-w-extrabold);
+    color: var(--clr-accent);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}

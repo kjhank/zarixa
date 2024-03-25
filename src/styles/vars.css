@@ -1,0 +1,74 @@
+/* stylelint-disable custom-property-empty-line-before */
+@property --shadow-blur {
+  inherits: true;
+  initial-value: min(2.4vw, 46px);
+  syntax: '<length>';
+}
+
+@property --shadow-y {
+  inherits: true;
+  initial-value: min(2.76vw, 53px);
+  syntax: '<length>';
+}
+
+@property --shadow-x {
+  inherits: true;
+  initial-value: min(1.406vw, 27px);
+  syntax: '<length>';
+}
+
+:root {
+  --clr-1: #462136;
+  --clr-2: #f26611;
+  --clr-3: #fff;
+  --clr-4: #552a43;
+  --clr-5: #ee3543;
+  --clr-6: #3e63aa;
+  --clr-7: #c1a5a6;
+  --clr-8: #965aad;
+  --clr-9: #aa9b64;
+  --clr-10: #707070;
+  --clr-11: #333;
+  --clr-12: #727d7e;
+  --clr-13: #f2f2f2;
+  --clr-14: #939393;
+
+  --clr-text: var(--clr-1);
+  --clr-bg: var(--clr-3);
+  --clr-text-alt: var(--clr-3);
+  --clr-accent: var(--clr-2);
+  --clr-ass: var(--clr-4);
+  --clr-shadow: rgb(from var(--clr-11) r g b / 10%); /* TODO: prolly need to hardcode for old browsers */
+
+  --clr-w-2c5: var(--clr-4);
+  --clr-w-10: var(--clr-8);
+  --clr-w-15: var(--clr-9);
+  --clr-w-20: var(--clr-10);
+
+  --clr-tab-inactive: var(--clr-13);
+  --clr-tab-border: var(--clr-14);
+
+  --f-fam-1: 'Proxima Nova', sans-serif;
+  --f-fam-2: 'Century Gothic', serif;
+  --f-w-normal: 400;
+  --f-w-medium: 500;
+  --f-w-bold: 700;
+  --f-w-extrabold: 900;
+  --t-default: 400ms;
+  --t-fast: calc(var(--t-default) / 2);
+  --t-slow: calc(var(--t-default) * 2);
+
+  --fs-9: clamp(6px, 0.5625rem, 9px);
+  --fs-10: clamp(6.3px, 0.625rem, 10px);
+  --fs-13: clamp(8.19px, 0.8125rem, 13px);
+  --fs-15: clamp(9.45px, 0.9375rem, 15px);
+  --fs-16: clamp(10px, 1rem, 16px);
+  --fs-18: clamp(11.34px, 1rem + 0.1vw, 18px);
+  --fs-19: clamp(11.2px, 1rem + 0.156vw, 19px);
+  --fs-20: clamp(12.6px, 1rem + 0.21vw, 20px);
+  --fs-22: clamp(14px, 1rem + 0.3125vw, 22px);
+  --fs-29: clamp(18px, 1rem + 0.68vw, 29px);
+  --fs-30: clamp(19px, 1rem + 0.73vw, 30px);
+  --fs-49: clamp(31px, 1rem + 1.72vw, 49px);
+  --fs-116: clamp(73px, 1rem + 5.21vw, 116px);
+}

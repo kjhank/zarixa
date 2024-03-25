@@ -1,0 +1,131 @@
+/* stylelint-disable selector-class-pattern */
+.ass-panel {
+  position: fixed;
+  z-index: 5;
+  inset: min(20.16vw, 387px) 0 auto 50%;
+  translate: -50% 0;
+
+  > .ass-widget-wrapper {
+    position: relative;
+
+    > .ass-widget-inner {
+      cursor: pointer;
+
+      position: absolute;
+      inset-block: 0 auto;
+      inset-inline-end: 0;
+
+      overflow: clip;
+      display: flex;
+      gap: min(4.531vw, 87px);
+      align-items: center;
+
+      inline-size: fit-content;
+      min-inline-size: min(8.96vw, 172px);
+      max-inline-size: min(32.031vw, 615px);
+      padding: min(2.135vw, 41px) min(1.5625vw, 30px);
+
+      color: var(--clr-text-alt);
+
+      background-color: var(--clr-ass);
+
+      > .ass-text {
+        inline-size: min(17.7vw, 340px);
+        margin-inline-start: max(-22.23vw, -427px);
+
+        font-size: var(--fs-29);
+        font-weight: var(--f-w-bold);
+        text-align: center;
+        text-wrap: balance;
+
+        transition: margin-inline-start var(--t-fast);
+      }
+    }
+
+    &[data-state="initial"],
+    &:hover {
+      .ass-text {
+        margin-inline-start: 0;
+      }
+    }
+  }
+
+  &:has(.utrenica-widget--visible) {
+    inset-block-start: min(10vw, 192px);
+    background-color: transparent;
+
+    .ass-text {
+      display: none;
+    }
+
+    .ass-widget-wrapper .ass-widget-inner {
+      padding: 0;
+      background-color: transparent;
+      border: 1px solid var(--clr-ass);
+    }
+  }
+
+  zarixa-external-chat-widget {
+    position: relative;
+    z-index: 1;
+
+    button.utrenica-widget-btn {
+      position: relative;
+      position: static;
+
+      inline-size: min(5.89vw, 113px);
+      block-size: auto;
+
+      background-color: transparent;
+      border: unset;
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        z-index: -1;
+        inset: max(-2.135vw, -41px) max(-1.5625vw, -30px);
+
+        background-color: var(--clr-ass);
+      }
+
+      &:hover {
+        background-color: inherit;
+      }
+
+      && > svg {
+        flex-shrink: 0;
+        inline-size: 100%;
+      }
+
+      && > span {
+        font-size: var(--fs-19);
+      }
+
+      &.utrenica-widget-btn--hidden {
+        display: none;
+      }
+    }
+
+    .utrenica-widget {
+      position: static;
+      display: none;
+      border: none;
+
+      > .utrenica-widget__header {
+        background-color: var(--clr-ass);
+        border-radius: 0;
+      }
+
+      &.utrenica-widget--visible {
+        display: block;
+      }
+
+      .utrenica-widget__footer-btns {
+        button {
+          background-color: var(--clr-ass);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.section {
+  &.contact {
+    display: flex;
+    gap: min(1.1vw, 21px);
+
+    .address {
+      position: relative;
+      flex: 1;
+      padding-block: min(6.875vw, 132px) min(6.7vw, 128px);
+      padding-inline-start: min(5.47vw, 105px);
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        z-index: -1;
+        inset: 0 0 0 -50vw;
+
+        background-color: var(--clr-13);
+      }
+
+      > address {
+        white-space: pre-line;
+
+        a {
+          text-decoration: none; /* sorry :-( */
+        }
+      }
+
+      > h2 {
+        font-size: var(--fs-16);
+        font-weight: var(--f-w-extrabold);
+        color: var(--clr-accent);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+
+      .logo {
+        display: block;
+        margin-block-end: min(3.542vw, 68px);
+      }
+    }
+
+    .video {
+      flex: min(54.43vw, 1045px) 0 0;
+      background-color: var(--clr-13);
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.section {
+  --clr-dose: var(--clr-text);
+
+  &.doses {
+    margin-block-start: min(3.125vw, 60px);
+  }
+
+  .doses-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: min(1.83vw, 35px);
+
+    max-inline-size: 100%;
+    margin-block: min(0.5vw, 8px) min(5.21vw, 100px);
+    padding-inline: 0;
+
+    list-style: none;
+
+    > li {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      background-color: var(--clr-bg);
+
+      > picture {
+        pointer-events: none;
+
+        flex-shrink: 0;
+
+        inline-size: min(641px, 33.39vw);
+        max-inline-size: unset;
+        margin-block-end: -20%;
+        margin-inline-end: -36%;
+
+        mix-blend-mode: multiply;
+
+        transition: translate var(--t-fast);
+      }
+
+      .dose {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        place-items: center;
+
+        aspect-ratio: 4.23;
+        inline-size: min(8.23vw, 158px);
+
+        font-family: var(--f-fam-2);
+        font-size: var(--fs-9);
+        font-weight: var(--f-w-bold);
+        color: var(--clr-text-alt);
+        text-align: center;
+
+        background-image: linear-gradient(var(--clr-dose), var(--clr-dose));
+        background-repeat: no-repeat;
+        background-position-x: 0;
+        background-size: 50%;
+        border: 1px solid var(--clr-dose);
+
+        transition: color var(--t-fast), background-position var(--t-fast);
+
+        > .characteristic {
+          color: var(--clr-dose);
+          transition: color var(--t-fast);
+        }
+      }
+
+      &:hover {
+        > picture {
+          translate: 0 -10%;
+        }
+
+        .dose {
+          color: var(--clr-dose);
+          background-position-x: 100%;
+
+          > .characteristic {
+            color: var(--clr-text-alt);
+          }
+        }
+      }
+    }
+  }
+}
