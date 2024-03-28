@@ -60,6 +60,7 @@
         font-weight: var(--f-w-bold);
         color: var(--clr-text-alt);
         text-align: center;
+        text-decoration: none;
 
         background-image: linear-gradient(var(--clr-dose), var(--clr-dose));
         background-repeat: no-repeat;

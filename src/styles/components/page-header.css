@@ -41,6 +41,8 @@
       color: var(--clr-text-alt);
       list-style: none;
 
+      background-size: 0;
+
       .nav-button {
         cursor: pointer;
 

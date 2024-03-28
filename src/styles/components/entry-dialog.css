@@ -83,6 +83,7 @@
     display: block;
 
     inline-size: fit-content;
+    margin-block: min(8px, 0.42vw) 0;
     margin-inline: auto;
     padding: min(8px, 0.42vw) min(16px, 0.83vw);
 

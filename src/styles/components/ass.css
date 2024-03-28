@@ -70,7 +70,7 @@
   }
 
   &:has(.utrenica-widget--visible) {
-    inset-block-start: min(10vw, 192px);
+    inset-block: auto 0;
     background-color: transparent;
 
     /* stylelint-disable-next-line no-descending-specificity */
@@ -143,6 +143,7 @@
       position: static;
       display: none;
       border: none;
+      border-radius: 0;
 
       > .utrenica-widget__header {
         background-color: var(--clr-ass);
