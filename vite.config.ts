@@ -10,10 +10,10 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        assetFileNames: ({ name }) => {
-          console.log(name);
+        assetFileNames: (file) => {
+          const { name } = file;
+
           if (name === 'index.css') return 'style.css';
-          if (name?.startsWith('subset')) return name;
 
           return '[name].[ext]';
         },
