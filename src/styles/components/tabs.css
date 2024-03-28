@@ -19,6 +19,12 @@
     &:has([aria-selected="false"]:first-child:hover) {
       border-inline-start-color: var(--clr-bg);
     }
+
+    @media (width < 480px) {
+      display: flex;
+      flex-direction: column;
+      border: none;
+    }
   }
 
   .tab {
@@ -62,6 +68,12 @@
     &:hover {
       background-color: var(--clr-bg);
     }
+
+    @media (width < 480px) {
+      block-size: auto;
+      padding-block: min(23px, 4.8vw);
+      border: none;
+    }
   }
 
   .tabs-panels-wrapper {
@@ -70,7 +82,7 @@
     grid-template: 'panels';
     border: 1px solid var(--clr-tab-border);
 
-    > section {
+    > .tab-panel {
       position: relative;
 
       overflow: clip;
@@ -86,6 +98,18 @@
         z-index: 1;
         opacity: 1;
       }
+
+      @media (width < 480px) {
+        padding: 10%;
+      }
     }
+
+    @media (width < 480px) {
+      border: none;
+    }
+  }
+
+  @media (width < 480px) {
+    border: 1px solid var(--clr-tab-border);
   }
 }

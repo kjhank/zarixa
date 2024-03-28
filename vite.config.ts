@@ -6,6 +6,22 @@ import postcssNesting from 'postcss-nesting';
 import { faviconsPlugin } from '@darkobits/vite-plugin-favicons';
 
 export default defineConfig({
+  base: '',
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: ({ name }) => {
+          console.log(name);
+          if (name === 'index.css') return 'style.css';
+          if (name?.startsWith('subset')) return name;
+
+          return '[name].[ext]';
+        },
+        chunkFileNames: '[name].js',
+        entryFileNames: '[name].js',
+      },
+    },
+  },
   css: {
     postcss: {
       plugins: [
@@ -26,6 +42,6 @@ export default defineConfig({
     },
   },
   plugins: [
-    faviconsPlugin({ icons: { favicons: { source: './src/assets/favicon.svg' } } }),
+    faviconsPlugin({ icons: { favicons: { source: './public/assets/favicon.svg' } } }),
   ],
 });

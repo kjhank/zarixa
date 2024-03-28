@@ -4,8 +4,8 @@
     font-style: normal;
     font-display: swap;
     src: local('Proxima Nova Medium'), local('ProximaNova-Medium'),
-        url('subset-ProximaNova-Medium.woff2') format('woff2'),
-        url('subset-ProximaNova-Medium.woff') format('woff');
+        url('./subset-ProximaNova-Medium.woff2') format('woff2'),
+        url('./subset-ProximaNova-Medium.woff') format('woff');
 }
 
 @font-face {
@@ -14,8 +14,8 @@
     font-style: normal;
     font-display: swap;
     src: local('Century Gothic Bold'), local('CenturyGothic-Bold'),
-        url('subset-CenturyGothic-Bold.woff2') format('woff2'),
-        url('subset-CenturyGothic-Bold.woff') format('woff');
+        url('./subset-CenturyGothic-Bold.woff2') format('woff2'),
+        url('./subset-CenturyGothic-Bold.woff') format('woff');
 }
 
 @font-face {
@@ -24,8 +24,8 @@
     font-style: normal;
     font-display: swap;
     src: local('Proxima Nova Bold'), local('ProximaNova-Bold'),
-        url('subset-ProximaNova-Bold.woff2') format('woff2'),
-        url('subset-ProximaNova-Bold.woff') format('woff');
+        url('./subset-ProximaNova-Bold.woff2') format('woff2'),
+        url('./subset-ProximaNova-Bold.woff') format('woff');
 }
 
 @font-face {
@@ -34,8 +34,8 @@
     font-style: normal;
     font-display: swap;
     src: local('Proxima Nova Extrabold'), local('ProximaNova-Extrabld'),
-        url('subset-ProximaNova-Extrabld.woff2') format('woff2'),
-        url('subset-ProximaNova-Extrabld.woff') format('woff');
+        url('./subset-ProximaNova-Extrabld.woff2') format('woff2'),
+        url('./subset-ProximaNova-Extrabld.woff') format('woff');
 }
 
 @font-face {
@@ -44,7 +44,7 @@
     font-style: normal;
     font-display: swap;
     src: local('Proxima Nova Regular'), local('ProximaNova-Regular'),
-        url('subset-ProximaNova-Regular.woff2') format('woff2'),
-        url('subset-ProximaNova-Regular.woff') format('woff');
+        url('./subset-ProximaNova-Regular.woff2') format('woff2'),
+        url('./subset-ProximaNova-Regular.woff') format('woff');
 }
 

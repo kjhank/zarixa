@@ -56,6 +56,16 @@
         line-height: 1.13;
         color: var(--clr-dose-copy, currentColor);
       }
+
+      @media (width < 480px) {
+        flex-direction: column;
+        gap: min(30px, 6vw);
+        padding: min(33px, 7vw) min(36px, 7.5vw);
+
+        > picture {
+          inline-size: 100%;
+        }
+      }
     }
 
     .doses {
@@ -100,6 +110,14 @@
         .doses {
           margin-block-start: min(1vw, 19px);
         }
+      }
+    }
+
+    @media (width < 480px) {
+      grid-template-columns: 1fr;
+
+      .copy {
+        gap: min(30px, 6vw);
       }
     }
   }

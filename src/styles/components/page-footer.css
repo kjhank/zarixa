@@ -20,6 +20,10 @@
       margin-inline-end: min(10.625vw, 204px);
 
       list-style-type: none;
+
+      @media (width < 480px) {
+        display: none;
+      }
     }
   }
 

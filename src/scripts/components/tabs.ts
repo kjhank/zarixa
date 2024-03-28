@@ -18,7 +18,7 @@ const setupTabs: SetupTabs = (tabslist) => {
     if (!(target instanceof Element)) return;
 
     const [_, tabId] = target.id.split('tab-');
-    const panelIndex = Number(tabId) - 1;
+    const panelIndex = Number(tabId);
 
     resetTabs(tabs, panels);
 
@@ -40,7 +40,7 @@ const setupTabs: SetupTabs = (tabslist) => {
 
     const [_, tabId] = activeTab?.id.split('tab-') ?? [];
 
-    const panelIndex = Number(tabId) - 1;
+    const panelIndex = Number(tabId);
     const isFirst = panelIndex === 0;
     const isLast = panelIndex === tabs.length - 1;
 

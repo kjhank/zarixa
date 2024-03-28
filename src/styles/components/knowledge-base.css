@@ -24,6 +24,10 @@
             --shadow-blur: min(3.6vw, 69px);
             --shadow-y: min(3.312vw, 63.6px);
           }
+
+          @media (width < 480px) {
+            padding: 10%;
+          }
         }
       }
 
@@ -49,6 +53,23 @@
             translate: 0 15%;
           }
         }
+
+        @media (width < 480px) {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+
+          svg {
+            inline-size: min(64px, 13.3vw);
+            block-size: min(64px, 13.3vw);
+            padding: 20%;
+            border: 2px solid var(--clr-accent);
+
+            path.arrow {
+              inline-size: 28.125%;
+            }
+          }
+        }
       }
     }
 
@@ -67,6 +88,17 @@
       inline-size: min(2.92vw, 56px);
       margin-block: min(2.3vw, 44px) max(-1.875vw, -36px);
       margin-inline-start: min(5.47vw, 105px);
+
+      @media (width < 480px) {
+        inline-size: 70%;
+        margin-inline-start: 0;
+      }
+    }
+
+    > div.tabs-wrapper {
+      @media (width < 480px) {
+        grid-column: narrow / span 2;
+      }
     }
   }
 }

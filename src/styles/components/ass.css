@@ -31,7 +31,7 @@
 
       > .ass-text {
         inline-size: min(17.7vw, 340px);
-        margin-inline-start: max(-22.23vw, -427px);
+        margin-inline-start: 0;
 
         font-size: var(--fs-29);
         font-weight: var(--f-w-bold);
@@ -45,7 +45,26 @@
     &[data-state="initial"],
     &:hover {
       .ass-text {
-        margin-inline-start: 0;
+        margin-inline-start: max(-22.23vw, -427px);
+      }
+    }
+
+    @media (width < 480px) {
+      &:has(.utrenica-widget--visible) {
+        grid-column: content;
+      }
+
+      .ass-text {
+        display: none;
+      }
+
+      button.utrenica-widget-btn {
+        inline-size: min(79.36px, 16.53vw);
+      }
+
+      .ass-widget-inner {
+        /* inset-block: auto 0; */
+        padding: min(28.16px, 5.87vw) min(20.48px, 4.27vw);
       }
     }
   }
@@ -60,9 +79,17 @@
     }
 
     .ass-widget-wrapper .ass-widget-inner {
+      inset-block: auto 0;
+
+      max-inline-size: unset;
       padding: 0;
+
       background-color: transparent;
       border: 1px solid var(--clr-ass);
+    }
+
+    @media (width < 480px) {
+      inset-block: auto 5vmax;
     }
   }
 
@@ -101,6 +128,10 @@
 
       && > span {
         font-size: var(--fs-19);
+
+        @media (width < 480px) {
+          font-size: 10px;
+        }
       }
 
       &.utrenica-widget-btn--hidden {
@@ -128,5 +159,9 @@
         }
       }
     }
+  }
+
+  @media (width < 480px) {
+    inset-block: auto 25vmax;
   }
 }

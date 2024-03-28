@@ -35,6 +35,16 @@
         mix-blend-mode: multiply;
 
         transition: translate var(--t-fast);
+
+        @media (width < 480px) {
+          inline-size: 100vw;
+          margin-inline: -30vw 0;
+
+          > img {
+            inline-size: 140vw;
+            max-inline-size: unset;;
+          }
+        }
       }
 
       .dose {
@@ -63,6 +73,11 @@
           color: var(--clr-dose);
           transition: color var(--t-fast);
         }
+
+        @media (width < 480px) {
+          align-self: flex-end;
+          inline-size: min(143px, 29.8vw);
+        }
       }
 
       &:hover {
@@ -79,6 +94,14 @@
           }
         }
       }
+
+      @media (width < 480px) {
+        flex-direction: column;
+      }
+    }
+
+    @media (width < 480px) {
+      grid-template-columns: 1fr;
     }
   }
 }

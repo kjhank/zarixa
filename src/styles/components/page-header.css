@@ -1,6 +1,6 @@
 .page-header {
   position: fixed;
-  z-index: 1;
+  z-index: 10;
   inset: 0 0 auto;
 
   padding-block: min(1.354vw, 26px);
@@ -12,6 +12,7 @@
   }
 
   .page-navigation {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -22,6 +23,10 @@
       svg {
         inline-size: auto;
         block-size: 100%;
+      }
+
+      @media (width < 480px) {
+        block-size: min(13.33vw, 50px);
       }
     }
 
@@ -39,6 +44,7 @@
       .nav-button {
         cursor: pointer;
 
+        isolation: isolate;
         position: relative;
 
         aspect-ratio: 3.585;
@@ -91,6 +97,95 @@
           background-image: url('/src/assets/images/buttons/menu-button-5.png');
         }
       }
+
+      @media (width < 480px) {
+        position: absolute;
+        inset: 100% 0 auto;
+        translate: 100vw 0;
+
+        flex-direction: column;
+        gap: min(26px, 6.93vw);
+
+        block-size: 100vmax;
+        padding-block-start: min(116px, 30.93vw);
+
+        background-image: url('/src/assets/images/hero/zarixa_www_top_bg_tlo.jpg');
+        background-size: cover;
+
+        transition: translate var(--t-fast);
+
+        &.is-active {
+          translate: unset;
+        }
+
+        .nav-button {
+          aspect-ratio: 3.585;
+          block-size: min(17.33vw, 65px);
+        }
+      }
+    }
+
+    .buttons-trigger {
+      display: none;
+
+      aspect-ratio: 1;
+      inline-size: min(30px, 8vw);
+      padding: 0;
+
+      color: var(--clr-text);
+
+      background-color: transparent;
+      border: none;
+
+      > menu-lines > svg {
+        display: block;
+        inline-size: 100%;
+        block-size: 100%;
+
+        path {
+          transform-origin: center;
+          transform-box: fill-box;
+          translate: 0;
+          rotate: none;
+
+          transition: translate var(--t-default), rotate var(--t-default), scale var(--t-fast);
+        }
+      }
+
+      &.is-active {
+        > menu-lines > svg {
+          path {
+            &:first-child {
+              scale: 0 1;
+            }
+
+            &:nth-child(2) {
+              translate: 0 10px;
+              rotate: z 45deg;
+            }
+
+            &:nth-child(3) {
+              translate: 0 -10px;
+              rotate: z -45deg;
+            }
+          }
+        }
+      }
+
+      @media (width < 480px) {
+        display: block;
+      }
+    }
+  }
+
+  @media (width < 480px) {
+    background-color: var(--clr-bg);
+
+    && > .page-navigation {
+      overflow-x: clip;
+      grid-column: full;
+      padding-block: min(14px, 3.73vw);
+      padding-inline: min(32px, 8.53vw) min(41px, 10.93vw);
     }
   }
 }

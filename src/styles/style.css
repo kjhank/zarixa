@@ -24,3 +24,10 @@
   -moz-osx-font-smoothing: grayscale;
   font-synthesis: none;
 }
+
+
+.main-content {
+  @media (width < 480px) {
+    overflow-x: hidden;
+  }
+}
