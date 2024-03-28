@@ -25,6 +25,11 @@
   font-synthesis: none;
 }
 
+::selection {
+  color: var(--clr-text);
+  background-color: var(--clr-accent);
+}
+
 
 .main-content {
   @media (width < 480px) {
