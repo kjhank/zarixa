@@ -184,7 +184,6 @@
     background-color: var(--clr-bg);
 
     && > .page-navigation {
-      overflow-x: clip;
       grid-column: full;
       padding-block: min(14px, 3.73vw);
       padding-inline: min(32px, 8.53vw) min(41px, 10.93vw);
