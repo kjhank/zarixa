@@ -3,6 +3,12 @@
 
   &.doses {
     margin-block-start: min(3.125vw, 60px);
+
+    @media (width < 480px) {
+      h2 {
+        margin-block-start: min(86px, 17.92vw);
+      }
+    }
   }
 
   .doses-list {
@@ -42,7 +48,8 @@
 
           > img {
             inline-size: 140vw;
-            max-inline-size: unset;;
+            max-inline-size: unset;
+            ;
           }
         }
       }

@@ -100,5 +100,11 @@
         grid-column: narrow / span 2;
       }
     }
+
+    @media (width < 480px) {
+      h2 {
+        margin-block-start: min(28px, 5.83vw);
+      }
+    }
   }
 }

@@ -18,6 +18,10 @@
 }
 
 :root {
+  --full-width: min(8.91vw, 171px);
+  --content: min(10.67vw, 205px);
+  --narrow: min(60.833vw, 1168px);
+
   --clr-1: #462136;
   --clr-2: #f26611;
   --clr-3: #fff;
@@ -76,6 +80,8 @@
 
   @media (width < 480px) {
     --fs-18: clamp(9px, 0.875rem, 14px);
+    --fs-19: clamp(9.5px, 0.9375rem, 15px);
+    --fs-30: clamp(19px, 1rem + 2.92vw, 30px);
     --fs-49: clamp(18px, 1rem + 2.5vw, 28px);
     --fs-116: clamp(34px, 1rem + 11vw, 80px);
     --fs-22: clamp(18px, 1rem + 0.42vw, 28px);

@@ -27,6 +27,11 @@
 
           /* sorry :-( */
         }
+
+        @media (width < 480px) {
+          inline-size: var(--narrow);
+          margin-inline: auto;
+        }
       }
 
       > h2 {
@@ -35,14 +40,26 @@
         color: var(--clr-accent);
         text-transform: uppercase;
         letter-spacing: 3px;
+
+        @media (width < 480px) {
+          inline-size: var(--narrow);
+          margin-inline: auto;
+        }
       }
 
       .logo {
         display: block;
         margin-block-end: min(3.542vw, 68px);
+
+        @media (width < 480px) {
+          inline-size: var(--narrow);
+          margin-inline: auto;
+        }
       }
 
       @media (width < 480px) {
+        padding: min(78px, 16.25vw) 0;
+
         &::after {
           inset: 0 -10vmax;
         }
@@ -73,11 +90,28 @@
         font-weight: var(--f-w-medium);
         line-height: 1.42;
       }
+
+      @media (width < 480px) {
+        flex-basis: 100vw;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        min-block-size: min(376px, 78.3vw);
+        padding: 6.4% 10% 0 48.8%;
+
+        text-align: start;
+
+        background-position-x: 30%;
+      }
     }
 
     @media (width < 480px) {
       flex-direction: column;
       gap: unset;
+
+      && {
+        grid-column: full;
+      }
     }
   }
 }

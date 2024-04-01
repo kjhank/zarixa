@@ -35,5 +35,9 @@
     grid-column: content-end;
 
     inline-size: min(2.7vw, 52px);
+
+    @media (width < 480px) {
+      inline-size: 8.27%;
+    }
   }
 }
