@@ -25,6 +25,48 @@
     text-align: center;
   }
 
+  .error {
+    position: absolute;
+    inset-block-start: 50%;
+    inset-inline-start: calc(100% + 1ch);
+
+    display: none;
+
+    inline-size: 100%;
+
+    font-size: var(--fs-13);
+    color: var(--clr-5);
+
+    &.error-pattern {
+      translate: 0 -50%;
+    }
+  }
+
+  .field-wrapper {
+    position: relative;
+    inline-size: fit-content;
+    margin-inline: auto;
+
+    &:has(:user-invalid) .error {
+      display: inline;
+    }
+
+    & + & {
+      margin-block-start: 2ch;
+    }
+
+    &:has(#confirmation) {
+      inline-size: 70%;
+
+      .error {
+        inset-block-start: 0;
+        inset-inline-start: unset;
+        inset-inline-end: calc(100% + 1ch);
+        text-align: end;
+      }
+    }
+  }
+
   label {
     display: flex;
     inline-size: fit-content;

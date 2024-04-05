@@ -20,7 +20,7 @@
       border-inline-start-color: var(--clr-bg);
     }
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       display: flex;
       flex-direction: column;
       border: none;
@@ -69,7 +69,7 @@
       background-color: var(--clr-bg);
     }
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       block-size: auto;
       padding-block: min(23px, 4.8vw);
       border: none;
@@ -99,17 +99,17 @@
         opacity: 1;
       }
 
-      @media (width < 480px) {
+      @media (width < 800px) {
         padding: 10%;
       }
     }
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       border: none;
     }
   }
 
-  @media (width < 480px) {
+  @media (width < 800px) {
     border: 1px solid var(--clr-tab-border);
   }
 }

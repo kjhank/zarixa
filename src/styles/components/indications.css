@@ -2,7 +2,7 @@
   &.indications {
     padding-block: min(1.61vw, 31px);
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       h2 {
         margin-block-start: min(28px, 5.83vw);
       }
@@ -63,7 +63,7 @@
         color: var(--clr-dose-copy, currentColor);
       }
 
-      @media (width < 480px) {
+      @media (width < 1000px) {
         --shadow-x: 0;
 
         flex-direction: column;
@@ -121,7 +121,7 @@
       }
     }
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       grid-template-columns: 1fr;
 
       .copy {

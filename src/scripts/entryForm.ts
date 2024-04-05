@@ -23,7 +23,6 @@ const validateLicense = (license: string): boolean => {
 const setupForm = (formNode: FormElement) => {
   formNode.addEventListener('submit', (event) => {
     event.preventDefault();
-    // validateForm();
 
     const { elements } = formNode;
 
@@ -36,6 +35,11 @@ const setupForm = (formNode: FormElement) => {
 
       dialog.close();
       document.body.style.overflow = 'clip';
+    } else {
+      const errorNode = document.querySelector<HTMLElement>('.error-pattern');
+
+      if (!errorNode) return;
+      errorNode.style.display = 'inline-block';
     }
   });
 };

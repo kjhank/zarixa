@@ -5,7 +5,7 @@
     background-image: url('../../assets/images/hero/zarixa_www_top_bg_tlo.jpg');
     background-size: cover;
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       padding-block: min(90px, 24vw) 0;
     }
   }
@@ -23,7 +23,7 @@
     line-height: 1.052;
     text-transform: uppercase;
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       text-align: center;
     }
   }
@@ -40,7 +40,7 @@
       margin-block-start: min(0.89vw, 17px);
     }
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       inline-size: auto;
       margin-block-end: 0;
     }
@@ -80,7 +80,7 @@
       }
     }
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       display: none;
     }
   }
@@ -91,7 +91,7 @@
     grid-column: full;
     inline-size: min(680px, 35.42vw);
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       position: static;
       inline-size: 100%;
     }
@@ -103,7 +103,7 @@
     grid-column: full;
     inline-size: min(37.136vw, 713px);
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       display: none;
     }
   }

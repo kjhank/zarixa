@@ -4,7 +4,7 @@
   &.doses {
     margin-block-start: min(3.125vw, 60px);
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       h2 {
         margin-block-start: min(86px, 17.92vw);
       }
@@ -42,7 +42,7 @@
 
         transition: translate var(--t-fast);
 
-        @media (width < 480px) {
+        @media (width < 800px) {
           inline-size: 100vw;
           margin-inline: -30vw 0;
 
@@ -82,7 +82,7 @@
           transition: color var(--t-fast);
         }
 
-        @media (width < 480px) {
+        @media (width < 800px) {
           align-self: flex-end;
           inline-size: min(143px, 29.8vw);
         }
@@ -103,12 +103,12 @@
         }
       }
 
-      @media (width < 480px) {
+      @media (width < 800px) {
         flex-direction: column;
       }
     }
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       grid-template-columns: 1fr;
     }
   }

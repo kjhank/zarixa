@@ -40,6 +40,11 @@
 
         transition: margin-inline-start var(--t-fast);
       }
+
+      @media (width < 1200px) {
+        min-inline-size: min(12vw, 144px);
+        max-inline-size: unset;
+      }
     }
 
     &[data-state="initial"],
@@ -49,7 +54,7 @@
       }
     }
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       &:has(.utrenica-widget--visible) {
         grid-column: content;
       }
@@ -88,7 +93,7 @@
       border: 1px solid var(--clr-ass);
     }
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       inset-block: auto 5vmax;
     }
   }
@@ -129,13 +134,17 @@
       && > span {
         font-size: var(--fs-19);
 
-        @media (width < 480px) {
+        @media (width < 800px) {
           font-size: 10px;
         }
       }
 
       &.utrenica-widget-btn--hidden {
         display: none;
+      }
+
+      @media (width < 1600px) {
+        inline-size: min(8vw, 128px);
       }
     }
 
@@ -162,7 +171,7 @@
     }
   }
 
-  @media (width < 480px) {
+  @media (width < 800px) {
     inset-block: auto 25vmax;
   }
 }

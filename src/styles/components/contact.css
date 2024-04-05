@@ -28,7 +28,7 @@
           /* sorry :-( */
         }
 
-        @media (width < 480px) {
+        @media (width < 800px) {
           inline-size: var(--narrow);
           margin-inline: auto;
         }
@@ -41,7 +41,7 @@
         text-transform: uppercase;
         letter-spacing: 3px;
 
-        @media (width < 480px) {
+        @media (width < 800px) {
           inline-size: var(--narrow);
           margin-inline: auto;
         }
@@ -51,13 +51,13 @@
         display: block;
         margin-block-end: min(3.542vw, 68px);
 
-        @media (width < 480px) {
+        @media (width < 800px) {
           inline-size: var(--narrow);
           margin-inline: auto;
         }
       }
 
-      @media (width < 480px) {
+      @media (width < 800px) {
         padding: min(78px, 16.25vw) 0;
 
         &::after {
@@ -67,6 +67,8 @@
     }
 
     .placeholder {
+      position: relative;
+
       display: flex;
       flex: min(54.43vw, 1045px) 0 0;
       flex-direction: column;
@@ -91,7 +93,21 @@
         line-height: 1.42;
       }
 
-      @media (width < 480px) {
+      .decoration {
+        position: absolute;
+        inset: auto min(116px, 6.042vw) max(-7.3vw, -140px) auto;
+        rotate: z 180deg;
+
+        grid-column: content-end;
+
+        inline-size: min(2.7vw, 52px);
+
+        @media (width < 800px) {
+          inline-size: 8.27%;
+        }
+      }
+
+      @media (width < 800px) {
         flex-basis: 100vw;
         align-items: flex-start;
         justify-content: flex-start;
@@ -105,7 +121,7 @@
       }
     }
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       flex-direction: column;
       gap: unset;
 

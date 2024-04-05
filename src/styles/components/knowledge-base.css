@@ -25,7 +25,7 @@
             --shadow-y: min(3.312vw, 63.6px);
           }
 
-          @media (width < 480px) {
+          @media (width < 800px) {
             padding: 10%;
           }
         }
@@ -54,7 +54,7 @@
           }
         }
 
-        @media (width < 480px) {
+        @media (width < 800px) {
           display: flex;
           flex-direction: column;
           text-align: center;
@@ -89,19 +89,19 @@
       margin-block: min(2.3vw, 44px) max(-1.875vw, -36px);
       margin-inline-start: min(5.47vw, 105px);
 
-      @media (width < 480px) {
+      @media (width < 800px) {
         inline-size: 70%;
         margin-inline-start: 0;
       }
     }
 
     > div.tabs-wrapper {
-      @media (width < 480px) {
+      @media (width < 800px) {
         grid-column: narrow / span 2;
       }
     }
 
-    @media (width < 480px) {
+    @media (width < 800px) {
       h2 {
         margin-block-start: min(28px, 5.83vw);
       }

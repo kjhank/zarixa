@@ -78,6 +78,18 @@
   --fs-49: clamp(31px, 1rem + 1.72vw, 49px);
   --fs-116: clamp(73px, 1rem + 5.21vw, 116px);
 
+  @media (width < 1600px) {
+    --fs-19: clamp(10.7px, 1rem + 0.0625vw, 17px);
+    --fs-22: clamp(12.411px, 1rem + 0.23vw, 19.7px);
+    --fs-29: clamp(16.4px, 1rem + 0.625vw, 26px)
+  }
+
+  @media (width < 1200px) {
+    --fs-19: clamp(9.45px, 0.9375rem, 15px);
+    --fs-22: clamp(10.962px, 1rem + 0.12vw, 17.4px);
+    --fs-29: clamp(14.427px, 1rem + 0.6vw, 22.9px);
+  }
+
   @media (width < 480px) {
     --fs-18: clamp(9px, 0.875rem, 14px);
     --fs-19: clamp(9.5px, 0.9375rem, 15px);

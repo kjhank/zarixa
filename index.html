@@ -34,7 +34,7 @@
             Asytent</button>
         </li>
       </ul>
-      <button class="buttons-trigger" id="buttons-trigger">
+      <button class="buttons-trigger" id="buttons-trigger" aria-label="toggle navigation">
         <menu-lines></menu-lines>
       </button>
     </nav>
@@ -233,6 +233,9 @@
         <span class="large-text">Lorem ipsum</span>
         <p>Curabitur augue sem, mollis vel purus sit amet, elementum molestie urna. Vivamus
           felis orci, egestas sed massa sit amet, ultrices venenatis lectus.</p>
+        <picture class="decoration">
+          <img src="assets/images/knowledge-base/side-rectangle.png" alt="">
+        </picture>
       </section>
     </div>
   </main>
@@ -257,9 +260,6 @@
             Asystent</button>
         </li>
       </ul>
-      <picture class="decoration">
-        <img src="assets/images/knowledge-base/side-rectangle.png" alt="">
-      </picture>
     </div>
   </footer>
   <aside class="ass-panel grid">
@@ -278,21 +278,27 @@
     <product-logo></product-logo>
     <form method="dialog" id="entry-form">
       <h2>Jestem lekarzem:</h2>
-      <label for="practice-license">
-        <span class="label-text">PWZ:</span>
-        <input type="text" id="practice-license" name="practice-license" minlength="7" maxlength="7" pattern="^\d{0,7}$"
-          required />
-      </label>
-      <label for="confirmation">
-        <input type="checkbox" name="confirmation" id="confirmation" required />
-        <p class="label-text">
-          Oświadczam, że posiadam prawo wykonywania zawodu lekarza i uzyskałem wpis do rejestru prowadzonego przez
-          właściwą okręgową radę lekarską, oraz nie zostałem zawieszony w prawie wykonywania zawodu lekarza ani
-          ograniczony w wykonywaniu określonych czynności medycznych. Jestem osobą uprawnioną do otrzymywania
-          specjalistycznych informacji medycznych zgodnie z ustawą Prawo farmaceutyczne. Chcę zapoznać się z treścią
-          serwisu.
-        </p>
-      </label>
+      <div class="field-wrapper">
+        <label for="practice-license">
+          <span class="label-text">PWZ:</span>
+          <input type="text" id="practice-license" name="practice-license" minlength="7" maxlength="7"
+            pattern="^\d{0,7}$" required />
+        </label>
+        <span class="error error-pattern">Podaj poprawny PWZ</span>
+      </div>
+      <div class="field-wrapper">
+        <label for="confirmation">
+          <input type="checkbox" name="confirmation" id="confirmation" required />
+          <span class="label-text">
+            Oświadczam, że posiadam prawo wykonywania zawodu lekarza i uzyskałem wpis do rejestru prowadzonego przez
+            właściwą okręgową radę lekarską, oraz nie zostałem zawieszony w prawie wykonywania zawodu lekarza ani
+            ograniczony w wykonywaniu określonych czynności medycznych. Jestem osobą uprawnioną do otrzymywania
+            specjalistycznych informacji medycznych zgodnie z ustawą Prawo farmaceutyczne. Chcę zapoznać się z treścią
+            serwisu.
+          </span>
+        </label>
+        <span class="error">Pole jest wymagane</span>
+      </div>
       <button>Wchodzę</button>
     </form>
   </dialog>
