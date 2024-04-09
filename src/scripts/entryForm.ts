@@ -34,7 +34,7 @@ const setupForm = (formNode: FormElement) => {
       if (!dialog) return;
 
       dialog.close();
-      document.body.style.overflow = 'clip';
+      document.documentElement.style.overflow = 'clip';
     } else {
       const errorNode = document.querySelector<HTMLElement>('.error-pattern');
 

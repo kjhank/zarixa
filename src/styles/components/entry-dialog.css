@@ -39,6 +39,11 @@
 
     &.error-pattern {
       translate: 0 -50%;
+
+      @media (width < 800px) {
+        position: static;
+        translate: unset;
+      }
     }
   }
 
@@ -63,6 +68,15 @@
         inset-inline-start: unset;
         inset-inline-end: calc(100% + 1ch);
         text-align: end;
+      }
+
+      @media (width < 800px) {
+        inline-size: 100%;
+
+        .error {
+          position: static;
+          padding-inline-start: 1.5em;
+        }
       }
     }
   }

@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Zarixa</title>
 </head>
@@ -40,6 +40,18 @@
     </nav>
   </header>
   <main class="grid main-content">
+    <aside class="ass-panel grid-custom">
+      <section class="ass-widget-wrapper full-width" data-state="initial">
+        <div class="ass-widget-inner" id="assistant" tabindex="0" data-toggle="ass">
+          <zarixa-external-chat-widget chatid="2" domainApiUrl="https://zarixa-ai-backend-51834927cedc.herokuapp.com"
+            welcomemessage="WELCOME_MSG" chattitle="CHAT_TITLE">
+          </zarixa-external-chat-widget>
+          <p class="ass-text">
+            Czy masz jakieś pytanie na temat leku Zarixa?
+          </p>
+        </div>
+      </section>
+    </aside>
     <section class="section hero full-width grid" id="hero">
       <span class="hero-brow">Udar<span class="accent">emnij</span></span>
       <article class="hero-description">
@@ -230,9 +242,6 @@
         </address>
       </section>
       <section class="placeholder">
-        <span class="large-text">Lorem ipsum</span>
-        <p>Curabitur augue sem, mollis vel purus sit amet, elementum molestie urna. Vivamus
-          felis orci, egestas sed massa sit amet, ultrices venenatis lectus.</p>
         <picture class="decoration">
           <img src="assets/images/knowledge-base/side-rectangle.png" alt="">
         </picture>
@@ -262,18 +271,6 @@
       </ul>
     </div>
   </footer>
-  <aside class="ass-panel grid">
-    <section class="ass-widget-wrapper full-width" data-state="initial">
-      <div class="ass-widget-inner" id="assistant" tabindex="0" data-toggle="ass">
-        <zarixa-external-chat-widget chatid="2" domainApiUrl="https://zarixa-ai-backend-51834927cedc.herokuapp.com"
-          welcomemessage="WELCOME_MSG" chattitle="CHAT_TITLE">
-        </zarixa-external-chat-widget>
-        <p class="ass-text">
-          Czy masz jakieś pytanie na temat leku Zarixa?
-        </p>
-      </div>
-    </section>
-  </aside>
   <dialog class="entry-dialog">
     <product-logo></product-logo>
     <form method="dialog" id="entry-form">

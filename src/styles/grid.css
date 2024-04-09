@@ -5,7 +5,7 @@
   margin-inline: auto;
 
 
-  & > :not(.narrow, .full-width) {
+  & > :not(.narrow, .full-width, .grid-custom) {
     grid-column: content;
   }
 

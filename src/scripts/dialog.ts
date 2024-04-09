@@ -1,9 +1,9 @@
 const setupDialog = (dialog: HTMLDialogElement) => {
-  document.body.style.overflow = 'clip';
+  document.documentElement.style.overflow = 'clip';
   dialog.showModal();
 
   dialog.addEventListener('close', () => {
-    document.body.removeAttribute('style');
+    document.documentElement.removeAttribute('style');
   });
 };
 

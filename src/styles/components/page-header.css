@@ -52,6 +52,8 @@
         aspect-ratio: 3.585;
         block-size: min(3.385vw, 65px);
 
+        color: inherit;
+
         background-color: transparent;
         background-repeat: no-repeat;
         background-size: 0;
@@ -183,7 +185,7 @@
   @media (width < 800px) {
     background-color: var(--clr-bg);
 
-    && > .page-navigation {
+    &&& > .page-navigation {
       grid-column: full;
       padding-block: min(14px, 3.73vw);
       padding-inline: min(32px, 8.53vw) min(41px, 10.93vw);
