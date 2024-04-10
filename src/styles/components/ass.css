@@ -34,7 +34,7 @@
 
       > .ass-text {
         inline-size: min(17.7vw, 340px);
-        margin-inline-start: 0;
+        margin-inline-start: max(-22.23vw, -427px);
 
         font-size: var(--fs-29);
         font-weight: var(--f-w-bold);
@@ -53,28 +53,49 @@
     &[data-state="initial"],
     &:hover {
       .ass-text {
-        margin-inline-start: max(-22.23vw, -427px);
+        margin-inline-start: 0;
       }
     }
 
     @media (width < 800px) {
-      .ass-text {
-        display: none;
-      }
-
       button.utrenica-widget-btn {
         inline-size: min(79.36px, 16.53vw);
       }
 
       .ass-widget-inner {
         inset-block: auto 0;
-        padding: min(28.16px, 5.87vw) min(20.48px, 4.27vw);
+        flex-direction: column;
+        padding: min(28.16px, 5.87vw) 0;
+
+        > zarixa-external-chat-widget {
+          padding: 0 min(20.48px, 4.27vw);
+
+          &:has(.utrenica-widget--visible) {
+            padding: 0;
+          }
+        }
+
+        > .ass-text {
+          inline-size: auto;
+          margin-inline-start: unset;
+          padding: 0 1.5ch;
+
+          font-size: var(--fs-10);
+          line-height: 1.2;
+        }
+      }
+    }
+
+    @media (width < 480px) {
+      .ass-widget-inner {
+        min-inline-size: 30vw;
       }
     }
   }
 
   &:has(.utrenica-widget--visible) {
     background-color: transparent;
+
     /* stylelint-disable-next-line no-descending-specificity */
     .ass-text {
       display: none;
@@ -168,5 +189,9 @@
   @media (width < 800px) {
     position: fixed;
     inset-block: auto 25vmax;
+  }
+
+  @media (width < 480px) {
+    inset-block: auto 10vmax;
   }
 }

@@ -92,11 +92,15 @@
     &:has(input[type="checkbox"]) {
       gap: min(16px, 0.83vw);
       align-items: baseline;
+      font-size: var(--fs-22);
 
       input {
         flex-shrink: 0;
+
         aspect-ratio: 1;
         inline-size: 0.8em;
+        block-size: 0.8em;
+
         accent-color: var(--clr-accent);
 
         &:focus {

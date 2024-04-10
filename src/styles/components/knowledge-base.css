@@ -83,7 +83,7 @@
       }
     }
 
-    .decoration {
+    && .decoration {
       grid-column: content-start;
       inline-size: min(2.92vw, 56px);
       margin-block: min(2.3vw, 44px) max(-1.875vw, -36px);
