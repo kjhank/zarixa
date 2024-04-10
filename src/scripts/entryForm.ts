@@ -1,4 +1,5 @@
 const ALWAYS_VALID_LICENSE = 'PTA-230713';
+const TRANSITION_TIMEOUT_MS = 2000;
 
 type FormElements = Readonly<{
   confirmation: HTMLInputElement;
@@ -21,6 +22,7 @@ const validateLicense = (license: string): boolean => {
 };
 
 const setupForm = (formNode: FormElement) => {
+  const assWrapper = document.querySelector('.ass-widget-wrapper');
   formNode.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -35,6 +37,12 @@ const setupForm = (formNode: FormElement) => {
 
       dialog.close();
       document.documentElement.style.overflow = 'clip';
+
+      const timeoutId = setTimeout(() => {
+        assWrapper?.removeAttribute('data-state');
+
+        clearTimeout(timeoutId);
+      }, TRANSITION_TIMEOUT_MS);
     } else {
       const errorNode = document.querySelector<HTMLElement>('.error-pattern');
 
