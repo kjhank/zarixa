@@ -42,9 +42,7 @@
   --clr-text-alt: var(--clr-3);
   --clr-accent: var(--clr-2);
   --clr-ass: var(--clr-4);
-  --clr-shadow: rgb(from var(--clr-11) r g b / 10%);
-
-  /* TODO: prolly need to hardcode for old browsers */
+  --clr-shadow: rgb(from var(--clr-11) r g b / 10%); /* TODO: prolly need to hardcode for old browsers */
 
   --clr-w-2c5: var(--clr-4);
   --clr-w-10: var(--clr-8);
@@ -53,6 +51,8 @@
 
   --clr-tab-inactive: var(--clr-13);
   --clr-tab-border: var(--clr-14);
+
+  --clr-downloads-border: var(--clr-13);
 
   --f-fam-1: 'Proxima Nova', sans-serif;
   --f-fam-2: 'Century Gothic', serif;
@@ -91,6 +91,7 @@
   }
 
   @media (width < 480px) {
+    --fs-15: clamp(5.78px, 0.73rem, 11.7px);
     --fs-18: clamp(9px, 0.875rem, 14px);
     --fs-19: clamp(9.5px, 0.9375rem, 15px);
     --fs-30: clamp(19px, 1rem + 2.92vw, 30px);

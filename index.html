@@ -71,10 +71,10 @@
       <picture class="hero-decoration full-width">
         <img src="assets/images/hero/zarixa_www_top_bg_tape.png" alt="">
       </picture>
-      <button class="hero-more" type="button" data-interaction="scroll" data-target="#indications">
-        Więcej informacji
-        <caret-icon></caret-icon>
-      </button>
+      <div class="hero-store-icons">
+        <a href="#"><apple-icon></apple-icon></a>
+        <a href="#"><google-icon></google-icon></a>
+      </div>
     </section>
     <section class="section indications" id="indications">
       <h2>Wskazania*</h2>
@@ -194,22 +194,151 @@
             <button class="tab" id="tab-1" role="tab" aria-selected="false" aria-controls="tab-panel-1" type="button">
               Materiały filmowe
             </button>
+            <button class="tab" id="tab-2" role="tab" aria-selected="false" aria-controls="tab-panel-2" type="button">
+              Badania
+            </button>
           </header>
           <div class="tabs-panels-wrapper">
             <section class="tab-panel tab-panel-active" id="tab-panel-0" role="tabpanel" tabindex="0"
               aria-labelledby="tab-0">
-              <ul class="files-list">
-                <li>
-                  <a class="download-link" href="./index.html" download>
-                    <arrow-icon></arrow-icon>
-                    <span>INFORMACJE DLA PRZEPISUJĄCYCH LEK ZARIXA</span>
-                  </a>
-                </li>
-              </ul>
+              <div>
+                <ul class="files-list">
+                  <li>
+                    <a class="download-link" href="./index.html" download>
+                      <arrow-icon></arrow-icon>
+                      <span>INFORMACJE DLA PRZEPISUJĄCYCH LEK ZARIXA</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </section>
             <section class="tab-panel" id="tab-panel-1" role="tabpanel" tabindex="0" aria-labelledby="tab-1">
               <div>
-                Foo bar
+                <div>
+                  Foo bar
+                </div>
+              </div>
+            </section>
+            <section class="tab-panel" id="tab-panel-2" role="tabpanel" tabindex="0" aria-labelledby="tab-2">
+              <div>
+                <article class="accordion" data-interactive="accordion">
+                  <section class="accordion-item">
+                    <h3>
+                      <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion-section-0"
+                        id="accordion-trigger-0"><span class="accordion-trigger-text">
+                          Profilaktyka udaru i zatorowości obwodowej u dorosłych pacjentów z migotaniem przedsionków
+                          niezwiązanym z wadą zastawkową
+                        </span>
+                        <arrow-alt></arrow-alt>
+                      </button>
+                    </h3>
+                    <div class="accordion-panel" id="accordion-section-0" aria-labelledby="accordion-trigger-0"
+                      role="region" hidden>
+                      <div>
+                        <ul class="files-list">
+                          <li>
+                            <a class="download-link" href="./index.html" download>
+                              <arrow-icon></arrow-icon>
+                              <span>COMPASS</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="download-link" href="./index.html" download>
+                              <arrow-icon></arrow-icon>
+                              <span>ATLAS ACS2-TIMI 51</span>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="download-link" href="./index.html" download>
+                              <arrow-icon></arrow-icon>
+                              <span>VOYAGER</span>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="accordion-item">
+                    <h3>
+                      <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion-section-1"
+                        id="accordion-trigger-1">
+                        <span class="accordion-trigger-text">
+                          Profilaktyka zdarzeń zakrzepowych o podłożu miażdżycowym u dorosłych pacjentów, u których
+                          występuje choroba wieńcowa (CAD) lub objawowa choroba tętnic obwodowych (obciążonych wysokim
+                          ryzykiem zdarzeń niedokrwiennych; po ostrym zespole wieńcowym (OZW) z podwyższonymi
+                          biomarkerami sercowymi
+                        </span>
+                        <arrow-alt></arrow-alt>
+                      </button>
+                    </h3>
+                    <div class="accordion-panel" id="accordion-section-1" aria-labelledby="accordion-trigger-1"
+                      role="region" hidden>
+                      <div>
+                        <ul>
+                          <li>foo</li>
+                          <li>bar</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="accordion-item">
+                    <h3>
+                      <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion-section-2"
+                        id="accordion-trigger-2">
+                        <span class="accordion-trigger-text">
+                          Leczenie zakrzepicy żył głębokich (ZŻG) i zatorowości płucnej (ZP) oraz profilaktyka nawrotowej ZŻG i ZP u dorosłych i dzieci
+                        </span>
+                        <arrow-alt></arrow-alt>
+                      </button>
+                    </h3>
+                    <div class="accordion-panel" id="accordion-section-2" aria-labelledby="accordion-trigger-2"
+                      role="region" hidden>
+                      <div>
+                        <ul>
+                          <li>foo</li>
+                          <li>bar</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="accordion-item">
+                    <h3>
+                      <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion-section-3"
+                        id="accordion-trigger-3">
+                        <span class="accordion-trigger-text">
+                          Profilaktyka żylnej choroby zakrzepowo zatorowej (ŻChZZ) u dorosłych pacjentów po przebytej planowej aloplastyce stawu biodrowego lub kolanowego
+                        </span>
+                        <arrow-alt></arrow-alt>
+                      </button>
+                    </h3>
+                    <div class="accordion-panel" id="accordion-section-3" aria-labelledby="accordion-trigger-3"
+                      role="region" hidden>
+                      <div>
+                        <ul>
+                          <li>foo</li>
+                          <li>bar</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="accordion-item">
+                    <h3>
+                      <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion-section-4"
+                        id="accordion-trigger-4"><span class="accordion-trigger-text">POZOSTAŁE BADANIA</span>
+                        <arrow-alt></arrow-alt>
+                      </button>
+                    </h3>
+                    <div class="accordion-panel" id="accordion-section-4" aria-labelledby="accordion-trigger-4"
+                      role="region" hidden>
+                      <div>
+                        <ul>
+                          <li>foo</li>
+                          <li>bar</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </section>
+                </article>
               </div>
             </section>
           </div>

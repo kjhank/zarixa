@@ -12,12 +12,19 @@ import { initDialog } from './scripts/dialog';
 import { MenuLines } from './scripts/components/menu-lines';
 import { initMenu } from './scripts/menu';
 import { initForm } from './scripts/entryForm';
+import { initAccordion } from './scripts/components/accordion';
+import { ArrowAltComponent } from './scripts/components/arrow-alt';
+import { AppleIcon } from './scripts/components/apple-icon';
+import { GoogleIcon } from './scripts/components/google-icon';
 
 customElements.define('product-logo', LogoComponent);
 customElements.define('ass-head', HeadComponent);
 customElements.define('caret-icon', CaretComponent);
 customElements.define('arrow-icon', ArrowComponent);
 customElements.define('menu-lines', MenuLines);
+customElements.define('arrow-alt', ArrowAltComponent);
+customElements.define('google-icon', GoogleIcon);
+customElements.define('apple-icon', AppleIcon);
 
 initTabs();
 initAss();
@@ -27,3 +34,4 @@ initTriggers();
 initDialog();
 initMenu();
 initForm();
+initAccordion();

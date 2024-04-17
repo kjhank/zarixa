@@ -1,0 +1,110 @@
+.accordion {
+  font-size: var(--fs-15);
+
+  .accordion-item {
+    & + & {
+      margin-block-start: min(18px, 0.9375vw);
+    }
+  }
+
+  .accordion-trigger {
+    cursor: pointer;
+
+    display: flex;
+    gap: min(102px, 5.3125vw);
+    align-items: center;
+    justify-content: space-between;
+
+    inline-size: 100%;
+    min-block-size: min(101px, 5.26vw);
+    padding: min(18px, 0.9375vw) min(32px, 1.67vw) min(8px, 0.42vw);
+
+    font-weight: var(--f-w-bold);
+    color: var(--clr-text);
+    text-align: start;
+
+    background-color: var(--clr-bg);
+    border: 1px solid var(--clr-downloads-border);
+    box-shadow: var(--shadow-x) var(--shadow-y) var(--shadow-blur) var(--clr-shadow);
+
+    transition: box-shadow var(--t-fast);
+
+    > arrow-alt {
+      flex-shrink: 0;
+      inline-size: min(18px, 0.9375vw);
+      color: var(--clr-accent);
+      transition: rotate var(--t-fast);
+
+      @media (width < 480px) {
+        inline-size: 15%;
+      }
+    }
+
+    > :is(span, arrow-alt) {
+      pointer-events: none;
+    }
+
+    &[aria-expanded="true"] {
+      > arrow-alt {
+        rotate: x 180deg;
+      }
+    }
+
+    &:hover {
+      --shadow-blur: min(3.6vw, 69px);
+      --shadow-y: min(3.312vw, 63.6px);
+    }
+  }
+
+  .accordion-panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    border: 1px dashed transparent;
+    transition: grid-template-rows var(--t-fast), border-color var(--t-fast);
+
+    > * {
+      overflow: hidden;
+      padding-inline: min(52px, 2.71vw);
+      transition: padding-block var(--t-fast);
+    }
+
+    &:not([hidden]) {
+      grid-template-rows: 1fr;
+      border-color: var(--clr-text);
+
+      > * {
+        padding-block: min(48px, 2.5vw);
+      }
+    }
+  }
+
+  p + ul {
+    margin-block-end: min(34px, 1.8vw);
+  }
+
+  .files-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: min(27px, 1.41vw);
+    align-items: center;
+
+    &&& li {
+      inline-size: fit-content;
+      margin-block-start: unset;
+
+      @media (width < 480px) {
+        inline-size: 100%;
+      }
+    }
+
+    @media (width < 800px) {
+      flex-direction: column;
+    }
+  }
+
+  @media (width < 480px) {
+    &&& {
+      padding-block: 0;
+    }
+  }
+}

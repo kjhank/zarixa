@@ -175,7 +175,7 @@
       }
 
       &.utrenica-widget--visible {
-        display: block;
+        display: flex;
       }
 
       .utrenica-widget__footer-btns {
