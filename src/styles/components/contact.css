@@ -66,32 +66,10 @@
       }
     }
 
-    .placeholder {
+    :is(.video, .placeholder) {
       position: relative;
-
       display: flex;
       flex: min(54.43vw, 1045px) 0 0;
-      flex-direction: column;
-      gap: min(22px, 1.146vw);
-      align-items: flex-end;
-      justify-content: flex-end;
-
-      padding: 0 min(173px, 9vw) min(54px, 2.8125vw) min(548px, 28.542vw);
-
-      background-color: var(--clr-13);
-      background-image: url('/src/assets/images/contact/zarixa_www_top_bg2.jpg');
-      background-size: cover;
-
-      .large-text {
-        font-size: var(--fs-49);
-        font-weight: var(--f-w-bold);
-      }
-
-      p {
-        font-size: var(--fs-19);
-        font-weight: var(--f-w-medium);
-        line-height: 1.42;
-      }
 
       .decoration {
         position: absolute;
@@ -105,6 +83,36 @@
         @media (width < 800px) {
           inline-size: 8.27%;
         }
+      }
+    }
+
+    .video {
+      video {
+        max-inline-size: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .placeholder {
+      flex-direction: column;
+      gap: min(22px, 1.146vw);
+      align-items: flex-end;
+      justify-content: flex-end;
+
+      padding: 0 min(173px, 9vw) min(54px, 2.8125vw) min(548px, 28.542vw);
+
+      background-color: var(--clr-13);
+      background-size: cover;
+
+      .large-text {
+        font-size: var(--fs-49);
+        font-weight: var(--f-w-bold);
+      }
+
+      p {
+        font-size: var(--fs-19);
+        font-weight: var(--f-w-medium);
+        line-height: 1.42;
       }
 
       @media (width < 800px) {

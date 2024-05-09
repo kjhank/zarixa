@@ -2,8 +2,8 @@ const setupDialog = (dialog: HTMLDialogElement) => {
   document.documentElement.style.overflow = 'clip';
   dialog.showModal();
 
-  dialog.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape') {
+  document.body.addEventListener('keydown', (event) => {
+    if (dialog.open && event.key === 'Escape') {
       event.preventDefault();
     }
   });

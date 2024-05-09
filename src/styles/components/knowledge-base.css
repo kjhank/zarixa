@@ -30,6 +30,19 @@
             padding: 10%;
           }
         }
+
+        &.video {
+          > li {
+            + li {
+              margin-block-start: 5%;
+            }
+
+            video {
+              display: block;
+              max-inline-size: 100%;
+            }
+          }
+        }
       }
 
       .download-link {
@@ -41,7 +54,9 @@
 
         font-weight: var(--f-w-bold);
         color: inherit;
-        text-decoration: none; /* really, really sorry :-( */
+        text-decoration: none;
+
+        /* really, really sorry :-( */
 
         arrow-icon {
           display: grid;
