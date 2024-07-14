@@ -8,98 +8,148 @@
     background-image: url('../../assets/images/hero/zarixa_www_top_bg_tlo.jpg');
     background-size: cover;
 
-    @media (width < 800px) {
-      padding-block: min(90px, 24vw) 0;
-    }
-  }
-
-  .hero-heading {
-    margin-block-end: min(0.9375vw, 18px);
-    font-size: var(--fs-49);
-    line-height: 1.04;
-  }
-
-  .hero-brow {
-    font-family: var(--f-fam-2);
-    font-size: var(--fs-116);
-    font-weight: var(--f-w-bold);
-    line-height: 1.052;
-    text-transform: uppercase;
-
-    @media (width < 800px) {
-      text-align: center;
-    }
-  }
-
-  .hero-copy {
-    font-size: var(--fs-18);
-  }
-
-  .hero-description {
-    inline-size: 42%;
-    margin-block: min(2.6vw, 50px) min(5.1vw, 98px);
-
-    > p ~ p {
-      margin-block-start: min(0.89vw, 17px);
+    .hero-heading {
+      margin-block-end: min(0.9375vw, 18px);
+      font-size: var(--fs-49);
+      line-height: 1.04;
     }
 
-    @media (width < 800px) {
-      inline-size: auto;
-      margin-block-end: 0;
-    }
-  }
-
-  .hero-store-icons {
-    translate: 0 -25%;
-    display: flex;
-    gap: min(15px, 0.78vw);
-    margin-inline: auto;
-
-    > a {
-      svg {
-        display: block;
-        inline-size: auto;
-        block-size: min(40px, 2.1vw);
-      }
-    }
-
-    @media (width < 480px) {
-      position: absolute;
-      inset: auto 0 0;
+    .hero-only {
+      display: flex;
       flex-direction: column;
+      align-items: flex-start;
 
-      > a {
-        svg {
-          inline-size: auto;
-          block-size: min(40px, 10vw);
+      .hero-image {
+        inline-size: min(39.74vw, 763px);
+      }
+
+      .more {
+        cursor: pointer;
+
+        isolation: isolate;
+        position: relative;
+
+        margin-block: auto min(6.46vw, 124px);
+        margin-inline-start: min(13vw, 250px);
+        padding: 0;
+        padding-block: min(0.833vw, 16px);
+        padding-inline: min(3.2813vw, 63px);
+
+        font-size: var(--fs-24);
+        font-weight: var(--f-w-bold);
+        line-height: 0.96;
+        text-transform: uppercase;
+
+        background-color: transparent;
+        background-image: url('/src/assets/images/hero/more.png');
+        background-size: 0;
+        border: none;
+
+        &::after {
+          content: '';
+
+          position: absolute;
+          z-index: -1;
+          inset: 0;
+
+          background-image: inherit;
+          background-repeat: no-repeat;
+          background-position-x: center;
+          background-size: contain;
+
+          transition: scale var(--t-fast);
+        }
+
+        > span {
+          pointer-events: none;
+          white-space: pre-line;
+        }
+
+        &:hover {
+          &::after {
+            scale: 1.2;
+          }
         }
       }
     }
-  }
 
-  .hero-image {
-    position: absolute;
-    z-index: -1;
-    inset: auto 0 0 auto;
+    .hero-prevent {
+      .hero-brow {
+        font-family: var(--f-fam-2);
+        font-size: var(--fs-116);
+        font-weight: var(--f-w-bold);
+        line-height: 1.052;
+        text-transform: uppercase;
 
-    grid-column: full;
+        @media (width < 800px) {
+          text-align: center;
+        }
+      }
 
-    inline-size: min(680px, 35.42vw);
+      .hero-copy {
+        font-size: var(--fs-18);
+      }
 
-    @media (width < 800px) {
-      position: static;
-      inline-size: 100%;
+      .hero-description {
+        inline-size: 42%;
+        margin-block: min(2.6vw, 50px) min(5.1vw, 98px);
+
+        > p ~ p {
+          margin-block-start: min(0.89vw, 17px);
+        }
+
+        @media (width < 800px) {
+          inline-size: auto;
+          margin-block-end: 0;
+        }
+      }
+
+      .hero-store-icons {
+        translate: 0 -25%;
+        display: flex;
+        gap: min(15px, 0.78vw);
+        margin-inline: auto;
+
+        > a {
+          svg {
+            display: block;
+            inline-size: auto;
+            block-size: min(40px, 2.1vw);
+          }
+        }
+
+        @media (width < 480px) {
+          position: absolute;
+          inset: auto 0 0;
+          flex-direction: column;
+
+          > a {
+            svg {
+              inline-size: auto;
+              block-size: min(40px, 10vw);
+            }
+          }
+        }
+      }
+
+      .hero-image {
+        position: absolute;
+        z-index: -1;
+        inset: auto 0 0 auto;
+
+        /* grid-column: full; */
+
+        inline-size: min(680px, 35.42vw);
+
+        @media (width < 800px) {
+          position: static;
+          inline-size: 100%;
+        }
+      }
     }
-  }
-
-  .hero-decoration {
-    position: absolute;
-    inset: auto auto min(2.6vw, 50px) 0;
-    grid-column: full;
-    inline-size: min(37.136vw, 713px);
 
     @media (width < 800px) {
-      display: none;
+      padding-block: min(90px, 24vw) 0;
     }
   }
 }

@@ -53,27 +53,50 @@
       </section>
     </aside>
     <section class="section hero full-width grid" id="hero">
-      <span class="hero-brow">Udar<span class="accent">emnij</span></span>
-      <article class="hero-description">
-        <h1 class="hero-heading">
-          ZARIXA*<br />
-          Lek przeciwzakrzepowy.
-        </h1>
-        <p class="hero-copy">Wysoce wybiórczy, bezpośredni inhibitor czynnika Xa, biodostępny po podaniu doustnym.</p>
-        <p class="hero-copy">Hamowanie aktywności czynnika Xa przerywa wewnątrzpochodną oraz zewnątrzpochodną drogę
-          kaskady krzepnięcia krwi, hamując zarówno wytwarzanie trombiny, jak i powstawanie zakrzepu.</p>
-        <p class="hero-copy">Rywaroksaban nie hamuje trombiny (aktywowany czynnik II) oraz nie wykazano, żeby wpływał na
-          płytki krwi.</p>
-      </article>
-      <picture class="hero-image">
-        <img src="assets/images/hero/zarixa_www_top_bg_gosc.png" alt="gość">
-      </picture>
-      <picture class="hero-decoration full-width">
-        <img src="assets/images/hero/zarixa_www_top_bg_tape.png" alt="">
-      </picture>
-      <div class="hero-store-icons">
-        <a href="#"><apple-icon></apple-icon></a>
-        <a href="#"><google-icon></google-icon></a>
+      <div class="carousel" role="region" data-interaction="carousel">
+        <article class="item hero-prevent" data-active>
+          <span class="hero-brow">Udar<span class="accent">emnij</span></span>
+          <article class="hero-description">
+            <h1 class="hero-heading">
+              ZARIXA*<br />
+              Lek przeciwzakrzepowy.
+            </h1>
+            <p class="hero-copy">Wysoce wybiórczy, bezpośredni inhibitor czynnika Xa, biodostępny po podaniu doustnym.
+            </p>
+            <p class="hero-copy">Hamowanie aktywności czynnika Xa przerywa wewnątrzpochodną oraz zewnątrzpochodną drogę
+              kaskady krzepnięcia krwi, hamując zarówno wytwarzanie trombiny, jak i powstawanie zakrzepu.</p>
+            <p class="hero-copy">Rywaroksaban nie hamuje trombiny (aktywowany czynnik II) oraz nie wykazano, żeby
+              wpływał
+              na
+              płytki krwi.</p>
+          </article>
+          <picture class="hero-image">
+            <img src="assets/images/hero/zarixa_www_top_bg_gosc.png" alt="gość">
+          </picture>
+          <div class="hero-store-icons">
+            <a href="#"><apple-icon></apple-icon></a>
+            <a href="#"><google-icon></google-icon></a>
+          </div>
+        </article>
+        <article class="item hero-only" data-inactive>
+          <h2 class="hero-heading">JEDYNY GENERYCZNY RIWAROKSABAN <span class="accent">REFUNDOWANY W 3 DAWKACH</span>
+          </h2>
+          <picture class="hero-image">
+            <img src="assets/images/hero/paczka.png" alt="paczka" width="763" height="274">
+          </picture>
+          <button class="more" data-interaction="scroll" data-target="#knowledge-base">
+            <span>Dowiedz się
+              więcej</span>
+          </button>
+        </article>
+        <article class="item" data-inactive>
+          foobar
+        </article>
+        <div class="carousel-nav full-width">
+          <img src="assets/images/hero/zarixa_www_top_bg_tape.png" alt="">
+          <carousel-button direction="previous"></carousel-button>
+          <carousel-button direction="next"></carousel-button>
+        </div>
       </div>
     </section>
     <section class="section indications" id="indications">
@@ -286,7 +309,8 @@
                       <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion-section-2"
                         id="accordion-trigger-2">
                         <span class="accordion-trigger-text">
-                          Leczenie zakrzepicy żył głębokich (ZŻG) i zatorowości płucnej (ZP) oraz profilaktyka nawrotowej ZŻG i ZP u dorosłych i dzieci
+                          Leczenie zakrzepicy żył głębokich (ZŻG) i zatorowości płucnej (ZP) oraz profilaktyka
+                          nawrotowej ZŻG i ZP u dorosłych i dzieci
                         </span>
                         <arrow-alt></arrow-alt>
                       </button>
@@ -306,7 +330,8 @@
                       <button class="accordion-trigger" aria-expanded="false" aria-controls="accordion-section-3"
                         id="accordion-trigger-3">
                         <span class="accordion-trigger-text">
-                          Profilaktyka żylnej choroby zakrzepowo zatorowej (ŻChZZ) u dorosłych pacjentów po przebytej planowej aloplastyce stawu biodrowego lub kolanowego
+                          Profilaktyka żylnej choroby zakrzepowo zatorowej (ŻChZZ) u dorosłych pacjentów po przebytej
+                          planowej aloplastyce stawu biodrowego lub kolanowego
                         </span>
                         <arrow-alt></arrow-alt>
                       </button>
@@ -400,7 +425,7 @@
       </ul>
     </div>
   </footer>
-  <dialog class="entry-dialog">
+  <!-- <dialog class="entry-dialog">
     <product-logo></product-logo>
     <form method="dialog" id="entry-form">
       <h2>Jestem lekarzem:</h2>
@@ -427,7 +452,7 @@
       </div>
       <button>Wchodzę</button>
     </form>
-  </dialog>
+  </dialog> -->
   <script type="module" src="/src/main.ts"></script>
   <script src="https://zarixa-ai-widget-b60492fa0793.herokuapp.com/utrenica-chat-widget.js"></script>
 </body>

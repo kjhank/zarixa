@@ -11,6 +11,8 @@
 @import url('./components/ass.css');
 @import url('./components/page-footer.css');
 @import url('./components/entry-dialog.css');
+@import url('./components/contact-form.css');
+@import url('./components/carousel.css');
 
 :root {
   font-family: var(--f-fam-1);
@@ -38,4 +40,18 @@
   @media (width < 480px) {
     overflow-x: clip;
   }
+}
+
+.visually-hidden {
+  position: absolute !important;
+
+  overflow: hidden !important;
+
+  inline-size: 1px !important;
+  block-size: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+
+  clip: rect(0 0 0 0) !important;
+  border: 0 !important;
 }

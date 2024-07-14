@@ -16,6 +16,9 @@ import { initAccordion } from './scripts/components/accordion';
 import { ArrowAltComponent } from './scripts/components/arrow-alt';
 import { AppleIcon } from './scripts/components/apple-icon';
 import { GoogleIcon } from './scripts/components/google-icon';
+import { CarouselButton } from './scripts/components/CarouselButton';
+import { LongArrow } from './scripts/components/long-arrow';
+import { initCarousels } from './scripts/carousel';
 
 customElements.define('product-logo', LogoComponent);
 customElements.define('ass-head', HeadComponent);
@@ -25,6 +28,8 @@ customElements.define('menu-lines', MenuLines);
 customElements.define('arrow-alt', ArrowAltComponent);
 customElements.define('google-icon', GoogleIcon);
 customElements.define('apple-icon', AppleIcon);
+customElements.define('carousel-button', CarouselButton);
+customElements.define('long-arrow', LongArrow);
 
 initTabs();
 initAss();
@@ -35,3 +40,4 @@ initDialog();
 initMenu();
 initForm();
 initAccordion();
+initCarousels();

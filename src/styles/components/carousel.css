@@ -1,0 +1,49 @@
+.carousel {
+  display: grid;
+  grid-template: 'slides';
+
+  > .item {
+    grid-area: slides;
+    transition: opacity var(--t-fast);
+
+    &[data-inactive] {
+      pointer-events: none;
+      opacity: 0;
+    }
+  }
+
+  .carousel-nav {
+    position: absolute;
+    inset: auto auto min(2.6vw, 50px) 0;
+
+    display: flex;
+    gap: min(2.76vw, 53px);
+    align-items: center;
+    justify-content: flex-end;
+
+    aspect-ratio: 9.64;
+    inline-size: min(37.136vw, 713px);
+    padding-inline-end: min(2.76vw, 53px);
+
+    > img {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+    }
+
+    @media (width < 800px) {
+      display: none;
+    }
+  }
+}
+
+carousel-button {
+  cursor: pointer;
+  inline-size: min(2.9688vw, 57px);
+
+  long-arrow[data-direction="next"] {
+    svg {
+      rotate: 180deg;
+    }
+  }
+}

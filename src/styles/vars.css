@@ -73,6 +73,7 @@
   --fs-19: clamp(11.2px, 1rem + 0.156vw, 19px);
   --fs-20: clamp(12.6px, 1rem + 0.21vw, 20px);
   --fs-22: clamp(14px, 1rem + 0.3125vw, 22px);
+  --fs-24: clamp(16px, 1rem + 0.42vw, 24px);
   --fs-29: clamp(18px, 1rem + 0.68vw, 29px);
   --fs-30: clamp(19px, 1rem + 0.73vw, 30px);
   --fs-49: clamp(31px, 1rem + 1.72vw, 49px);
