@@ -1,4 +1,5 @@
 .carousel {
+  overflow: clip;
   display: grid;
   grid-template: 'slides';
 
@@ -32,7 +33,11 @@
     }
 
     @media (width < 800px) {
-      display: none;
+      inline-size: 100%;
+
+      > img {
+        display: none;
+      }
     }
   }
 }
@@ -40,10 +45,16 @@
 carousel-button {
   cursor: pointer;
   inline-size: min(2.9688vw, 57px);
+  color: var(--clr-text-alt);
 
   long-arrow[data-direction="next"] {
     svg {
       rotate: 180deg;
     }
+  }
+
+  @media (width < 800px) {
+    inline-size: min(21.333vw, 80px);
+    color: var(--clr-accent);
   }
 }
