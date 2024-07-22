@@ -75,6 +75,7 @@
         font-size: var(--fs-24);
         font-weight: var(--f-w-bold);
         line-height: 0.96;
+        color: var(--clr-text-alt);
         text-transform: uppercase;
 
         background-color: transparent;
