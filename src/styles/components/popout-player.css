@@ -1,0 +1,81 @@
+popout-player {
+  --offset: min(1.2vw, 23px);
+
+  position: relative;
+  position: fixed;
+  inset: auto var(--offset) var(--offset) auto;
+
+  inline-size: min(425px, 22.14vw);
+  padding-block-end: var(--offset);
+  padding-inline: var(--offset);
+
+  background-color: var(--clr-bg);
+  border: 2px solid var(--clr-4);
+  border-radius: var(--offset);
+  box-shadow: 0 var(--shadow-y) var(--shadow-blur) var(--clr-shadow);
+
+  @media (width < 800px) {
+    --offset: min(2.875vw, 23px);
+    inline-size: min(400px, 50vw);
+    inset-inline: 50% 0;
+    translate: -50% 0;
+  }
+
+  @media (width < 480px) {
+    --offset: min(4.8vw, 23px);
+    inline-size: 90vw;
+  }
+
+  > audio {
+    display: block;
+    inline-size: 100%;
+    margin-block: min(10px, 0.6vw);
+  }
+
+  > product-logo {
+    display: block;
+    inline-size: 40%;
+    margin-inline: auto;
+  }
+
+  .name {
+    overflow: clip;
+
+    inline-size: 44%;
+    margin-inline: auto;
+
+    font-size: var(--fs-13);
+    font-weight: var(--f-w-medium);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  > .close-button {
+    all: unset;
+    cursor: pointer;
+    position: absolute;
+    inset: var(--offset) var(--offset) auto auto;
+
+    svg {
+      path {
+        transform-origin: center;
+        transform-box: fill-box;
+
+        &:first-child {
+          scale: 0 1;
+        }
+
+        &:nth-child(2) {
+          translate: 0 10px;
+          rotate: z 45deg;
+        }
+
+        &:nth-child(3) {
+          translate: 0 -10px;
+          rotate: z -45deg;
+        }
+      }
+
+    }
+  }
+}

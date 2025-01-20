@@ -11,8 +11,8 @@ const resetTabs = (tabs: Array<Element>, panels: Array<Element>) => {
 };
 
 const setupTabs: SetupTabs = (tabslist) => {
-  const tabs = Array.from(tabslist.querySelectorAll('[role="tab"]'));
-  const panels = Array.from(tabslist.querySelectorAll('[role="tabpanel"]'));
+  const tabs = Array.from(tabslist.querySelectorAll<HTMLElement>('[role="tab"]'));
+  const panels = Array.from(tabslist.querySelectorAll<HTMLElement>('[role="tabpanel"]'));
 
   const handleTabChange = ({ target }: Event) => {
     if (!(target instanceof Element)) return;
@@ -24,8 +24,11 @@ const setupTabs: SetupTabs = (tabslist) => {
 
     target.setAttribute('aria-selected', 'true');
 
-    if (panels.at(panelIndex)) {
-      panels.at(panelIndex)?.classList.add('tab-panel-active');
+    const selectedPanel = panels.at(panelIndex);
+
+    if (selectedPanel) {
+      selectedPanel.classList.add('tab-panel-active');
+      selectedPanel.focus();
     }
   };
 

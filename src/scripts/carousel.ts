@@ -80,5 +80,5 @@ export const initCarousels = () => {
   const carousels = document.querySelectorAll('[data-interaction="carousel"]');
   if (!carousels) return;
 
-  carousels.forEach((carousel) => setupCarousel(carousel));
+  carousels.forEach(setupCarousel);
 };

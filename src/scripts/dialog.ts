@@ -7,6 +7,7 @@ const setupDialog = (dialog: HTMLDialogElement) => {
       event.preventDefault();
     }
   });
+
   dialog.addEventListener('close', () => {
     document.documentElement.removeAttribute('style');
   });
@@ -14,8 +15,9 @@ const setupDialog = (dialog: HTMLDialogElement) => {
 
 export const initDialog = () => {
   const dialog = document.querySelector<HTMLDialogElement>('dialog.entry-dialog');
+  const isDev = import.meta.env.DEV;
 
-  if (!dialog) return;
+  if (!dialog || isDev) return;
 
   setupDialog(dialog);
 };

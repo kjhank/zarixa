@@ -72,6 +72,10 @@
 
           > svg {
             block-size: 55%;
+
+            @media (width < 800px) {
+                block-size: 80%;
+            }
           }
         }
 
@@ -93,7 +97,7 @@
           arrow-icon {
             inline-size: min(64px, 13.3vw);
             block-size: min(64px, 13.3vw);
-            padding: 10%;
+            padding: 0;
             border: 2px solid var(--clr-accent);
 
             path.arrow {

@@ -14,6 +14,56 @@
       line-height: 1.04;
     }
 
+    .more {
+      cursor: pointer;
+
+      isolation: isolate;
+      position: relative;
+
+      padding: 0;
+      padding-block: min(0.833vw, 16px);
+      padding-inline: min(3.2813vw, 63px);
+
+      font-size: var(--fs-24);
+      font-weight: var(--f-w-bold);
+      line-height: 0.96;
+      color: var(--clr-text-alt);
+      text-align: center;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      background-color: transparent;
+      background-image: url('/src/assets/images/hero/more.png');
+      background-size: 0;
+      border: none;
+
+      &::after {
+        content: '';
+
+        position: absolute;
+        z-index: -1;
+        inset: 0;
+
+        background-image: inherit;
+        background-repeat: no-repeat;
+        background-position-x: center;
+        background-size: contain;
+
+        transition: scale var(--t-fast);
+      }
+
+      > span {
+        pointer-events: none;
+        white-space: pre-line;
+      }
+
+      &:hover {
+        &::after {
+          scale: 1.2;
+        }
+      }
+    }
+
     .hero-only {
       display: flex;
       flex-direction: column;
@@ -61,14 +111,15 @@
       }
 
       .more {
-        cursor: pointer;
+        /* cursor: pointer;
 
         isolation: isolate;
-        position: relative;
+        position: relative; */
 
         margin-block: auto min(6.46vw, 124px);
         margin-inline-start: min(13vw, 250px);
-        padding: 0;
+
+        /* padding: 0;
         padding-block: min(0.833vw, 16px);
         padding-inline: min(3.2813vw, 63px);
 
@@ -109,7 +160,7 @@
           &::after {
             scale: 1.2;
           }
-        }
+        } */
 
         @media (width < 1200px) {
           margin-block-start: unset;
@@ -126,7 +177,14 @@
       }
     }
 
-    .hero-prevent {
+    .hero-reimbursement {
+      & > .hero-copy {
+        font-weight: var(--f-w-bold);
+      }
+    }
+
+    .hero-prevent,
+    .hero-reimbursement {
       .hero-brow {
         font-family: var(--f-fam-2);
         font-size: var(--fs-116);

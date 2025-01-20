@@ -13,6 +13,8 @@
 @import url('./components/entry-dialog.css');
 @import url('./components/contact-form.css');
 @import url('./components/carousel.css');
+@import url('./components/audio-panel.css');
+@import url('./components/popout-player.css');
 
 :root {
   font-family: var(--f-fam-1);
@@ -37,7 +39,7 @@
 .main-content {
   position: relative;
 
-  @media (width < 480px) {
+  @media (width < 800px) {
     overflow-x: clip;
   }
 }

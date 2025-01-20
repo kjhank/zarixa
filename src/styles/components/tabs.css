@@ -6,8 +6,9 @@
     z-index: 1;
 
     overflow-x: auto;
-    display: inline-flex;
+    display: flex;
 
+    max-inline-size: 100%;
     margin-block-end: -1px;
 
     border-inline-start: 1px solid var(--clr-tab-inactive);
@@ -32,8 +33,10 @@
 
     position: relative;
 
+    flex-grow: 1;
+
     block-size: min(3.125vw, 60px);
-    padding-inline: min(3.39vw, 65px);
+    padding-inline: min(1vw, 20px);
 
     font-size: var(--fs-22);
     font-weight: var(--f-w-medium);

@@ -192,6 +192,6 @@
   }
 
   @media (width < 480px) {
-    inset-block: auto 10vmax;
+    inset-block: auto 25vmax;
   }
 }

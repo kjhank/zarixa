@@ -19,6 +19,10 @@ import { GoogleIcon } from './scripts/components/google-icon';
 import { CarouselButton } from './scripts/components/CarouselButton';
 import { LongArrow } from './scripts/components/long-arrow';
 import { initCarousels } from './scripts/carousel';
+import { AudioIcon } from './scripts/components/audio-icon';
+import { initPlayers } from './scripts/audio-play';
+import { PopoutPlayer } from './scripts/components/PopoutPlayer';
+import { initFocus } from './scripts/focus';
 
 customElements.define('product-logo', LogoComponent);
 customElements.define('ass-head', HeadComponent);
@@ -30,6 +34,8 @@ customElements.define('google-icon', GoogleIcon);
 customElements.define('apple-icon', AppleIcon);
 customElements.define('carousel-button', CarouselButton);
 customElements.define('long-arrow', LongArrow);
+customElements.define('audio-icon', AudioIcon);
+customElements.define('popout-player', PopoutPlayer);
 
 initTabs();
 initAss();
@@ -41,3 +47,5 @@ initMenu();
 initForm();
 initAccordion();
 initCarousels();
+initPlayers();
+initFocus();

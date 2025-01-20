@@ -6,7 +6,7 @@ const setupAccordion = (accordionNode: Element) => {
   const handleClick = ({ target }: Event) => {
     if (!(target instanceof HTMLButtonElement)) return;
 
-    const triggerIndex = Number(target.id.split('accordion-trigger-').at(1));
+    const triggerIndex = Number(target.id.split(/accordion-\d-trigger-/).at(1));
     const isExpanded = target.ariaExpanded === 'true';
 
     target.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
@@ -22,7 +22,7 @@ const setupAccordion = (accordionNode: Element) => {
 };
 
 export const initAccordion = () => {
-  const accordions = Array.from(document.querySelectorAll<Element>('[data-interactive="accordion"]'));
+  const accordions = Array.from(document.querySelectorAll<Element>('[data-interaction="accordion"]'));
 
   accordions.forEach(setupAccordion);
 };
