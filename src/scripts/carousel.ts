@@ -1,4 +1,4 @@
-const INTERVAL = 5000;
+const INTERVAL = 9000;
 
 const setupCarousel = (carousel: Element) => {
   const items = carousel.querySelectorAll('.item');

@@ -2,9 +2,6 @@
   &.hero {
     isolation: isolate;
     position: relative;
-
-    padding-block: min(11.3vw, 217px) min(3.02vw, 58px);
-
     background-image: url('../../assets/images/hero/zarixa_www_top_bg_tlo.jpg');
     background-size: cover;
 
@@ -76,7 +73,8 @@
       }
 
       .hero-image {
-        inline-size: min(39.74vw, 763px);
+        inline-size: min(799px, 41.7vw);
+        margin-block: auto;
 
         > img {
           inline-size: 100%;
@@ -84,8 +82,9 @@
         }
 
         @media (width < 800px) {
-          inline-size: 100%;
-          margin-block-end: min(10vw, 80px);
+          inline-size: 80%;
+          margin-block: min(10vw, 80px) auto;
+          margin-inline: auto;
         }
       }
 
@@ -99,68 +98,15 @@
           block-size: auto;
         }
 
-        @media (width < 1200px) {
-          /* inset-block-end: max(-8.333vw, -160px); */
-        }
-
         @media (width < 800px) {
-          /* inset-block-end: max(-20vw, -160px); */
           inset-inline: 0 auto;
           inline-size: 80vw;
         }
       }
 
       .more {
-        /* cursor: pointer;
-
-        isolation: isolate;
-        position: relative; */
-
         margin-block: auto min(6.46vw, 124px);
         margin-inline-start: min(13vw, 250px);
-
-        /* padding: 0;
-        padding-block: min(0.833vw, 16px);
-        padding-inline: min(3.2813vw, 63px);
-
-        font-size: var(--fs-24);
-        font-weight: var(--f-w-bold);
-        line-height: 0.96;
-        color: var(--clr-text-alt);
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-
-        background-color: transparent;
-        background-image: url('/src/assets/images/hero/more.png');
-        background-size: 0;
-        border: none;
-
-        &::after {
-          content: '';
-
-          position: absolute;
-          z-index: -1;
-          inset: 0;
-
-          background-image: inherit;
-          background-repeat: no-repeat;
-          background-position-x: center;
-          background-size: contain;
-
-          transition: scale var(--t-fast);
-        }
-
-        > span {
-          pointer-events: none;
-          white-space: pre-line;
-        }
-
-        &:hover {
-          &::after {
-            scale: 1.2;
-          }
-        } */
 
         @media (width < 1200px) {
           margin-block-start: unset;
@@ -174,12 +120,6 @@
 
       @media (width < 1200px) {
         justify-content: space-between;
-      }
-    }
-
-    .hero-reimbursement {
-      & > .hero-copy {
-        font-weight: var(--f-w-bold);
       }
     }
 
@@ -219,14 +159,92 @@
         position: absolute;
         z-index: -1;
         inset: auto 0 0 auto;
-
-        /* grid-column: full; */
-
         inline-size: min(680px, 35.42vw);
 
         @media (width < 800px) {
           position: static;
           inline-size: 100%;
+          margin-block-start: auto;
+        }
+      }
+    }
+
+    .hero-reimbursement {
+      display: flex;
+      flex-direction: column;
+      padding-block: min(140px, 7.3vw) 0;
+
+      :where(.hero-image-1,
+        .hero-image-3) {
+        position: absolute;
+      }
+
+      .hero-image {
+        inset: auto 0 0 auto;
+        inline-size: min(1076px, 56vw);
+
+        img {
+          block-size: auto;
+        }
+
+        @media (width < 800px) {
+          order: 1;
+          inline-size: 95%;
+        }
+      }
+
+      .hero-image-2 {
+        inline-size: min(760px, 39.58vw);
+
+        img {
+          block-size: auto;
+        }
+
+        @media (width < 800px) {
+          margin-block: 3em;
+        }
+      }
+
+      .hero-image-3 {
+        inset: min(150px, 7.8125vw) min(589px, 30.68vw) auto auto;
+
+        @media (width < 800px) {
+          inset: auto auto 30% 0;
+        }
+      }
+
+      & .hero-description {
+        margin-block: 0;
+
+        & .hero-copy {
+          font-weight: var(--f-w-bold);
+          white-space: pre-line;
+        }
+
+        @media (width < 1600px) {
+          inline-size: 50%;
+        }
+
+        @media (width < 800px) {
+          inline-size: 100%;
+
+          .hero-image-2 {
+            inline-size: 100%;
+          }
+        }
+      }
+
+      .more {
+        display: block;
+        margin: min(38px, 12vw) auto 0;
+      }
+
+      .footnotes {
+        margin-block: auto 1em;
+        font-size: var(--fs-10);
+
+        @media (width < 800px) {
+          margin-block: 1em;
         }
       }
     }

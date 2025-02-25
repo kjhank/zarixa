@@ -22,7 +22,7 @@ import { initCarousels } from './scripts/carousel';
 import { AudioIcon } from './scripts/components/audio-icon';
 import { initPlayers } from './scripts/audio-play';
 import { PopoutPlayer } from './scripts/components/PopoutPlayer';
-import { initFocus } from './scripts/focus';
+import { initReveal } from './scripts/reveal';
 
 customElements.define('product-logo', LogoComponent);
 customElements.define('ass-head', HeadComponent);
@@ -48,4 +48,4 @@ initForm();
 initAccordion();
 initCarousels();
 initPlayers();
-initFocus();
+initReveal();

@@ -1,16 +1,4 @@
-const setupFocus = (event: MouseEvent) => {
-  if (!(event.target instanceof HTMLButtonElement)) return;
-
-  const { dataset } = event.target;
-
-  const { target } = dataset;
-
-  if (!target) return;
-
-  const targetNode = document.querySelector<HTMLElement>(target);
-
-  if (!targetNode) return;
-
+const reveal = (targetNode: HTMLElement) => {
   const targetAccordion = targetNode.closest('.accordion-item');
 
   const targetPanel = targetNode.closest<HTMLButtonElement>('.tab-panel');
@@ -36,8 +24,24 @@ const setupFocus = (event: MouseEvent) => {
   targetNode.scrollIntoView();
 };
 
-export const initFocus = () => {
-  const focusTriggers = document.querySelectorAll<HTMLButtonElement>('[data-interaction="focus"]');
+const setupReveal = (event: MouseEvent) => {
+  if (!(event.target instanceof HTMLButtonElement)) return;
 
-  focusTriggers.forEach((trigger) => trigger.addEventListener('click', setupFocus));
+  const { dataset } = event.target;
+
+  const { target } = dataset;
+
+  if (!target) return;
+
+  const targetNode = document.querySelector<HTMLElement>(target);
+
+  if (!targetNode) return;
+
+  reveal(targetNode);
+};
+
+export const initReveal = () => {
+  const focusTriggers = document.querySelectorAll<HTMLButtonElement>('[data-interaction="reveal"]');
+
+  focusTriggers.forEach((trigger) => trigger.addEventListener('click', setupReveal));
 };
